@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+
+    <fieldset>
+        <legend>Sign Up</legend>
+        <form action="/submit_form" method="get" target="_blank">
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <input type="text" name="username">
+            
+            <input list="languages" name="language" id="language">
+            <datalist id="languages">
+                <option value="java">Java</option>
+                <option value="javascript">javascript</option>
+                <option value="ruby"></option>
+                <option value="python"></option>
+                <option value="go"></option>
+            </datalist>
+
+            <br>
+            <details>
+                <summary>Html</summary>
+                Hyper text markup language
+            </details>
+            <br>
+
+            <select name="selectnum" id="selectnum">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+
+            </select>
+
+            <input type="submit">
+            <button type="reset">Reset</button>
+        </form>
+    </fieldset>
+    
+</body>
+</html>
