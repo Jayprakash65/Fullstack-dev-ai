@@ -1,0 +1,23 @@
+1. variables
+2. data types 
+3. Coditionals 
+4. Loops
+
+1. Conditinals 
+
+Conditinals: The destiny of programs dertermined by the decisions you make.
+
+1. if-else , else-if
+2. switch 
+3. ternary
+
+
+
+4. Loops
+
+    -> for loop : when we want keep everything in same syantax.
+    -> while loop: when i wnat to do the stuff manually and have dependence.
+    -> do-while loop: when i wnat to do the stuff manually and have dependence. and even if conditin is not met initally i will run once.
+
+5. Function
+    -> increase reausability and costomize(value) as per the need.
