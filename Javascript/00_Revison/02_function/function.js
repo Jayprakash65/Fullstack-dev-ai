@@ -18,7 +18,7 @@ sayHello("jay");
 sayHello("rahul")
 
 // parametrs: when aceppt the value
-// arugumnet: when we sen the value
+// arugumnet: when we send the value
 
 sayHello('')
 
