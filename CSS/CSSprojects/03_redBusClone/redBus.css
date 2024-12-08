@@ -1,0 +1,82 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 99px;
+    
+}
+
+.left{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+
+}
+
+.nav-left{
+    display: flex;
+  align-items: center;
+    background-color: aqua;
+}
+
+.nav-left img{
+    width: 60px;
+    cursor: pointer;
+}
+
+.nav-center{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.nav-center .nav-item{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+
+}
+
+.nav-center .nav-item img{
+    width: 30px;
+    height: 24px;
+}
+
+.nav-center .Busticket{
+    display: flex;
+    background-color: #d84e56;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-center .Trainticket{
+    display: flex;
+    
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+}
+
+.right{
+    display: flex;
+    gap: 20;
+}
+ */

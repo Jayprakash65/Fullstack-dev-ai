@@ -1,0 +1,149 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.solar-system {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: #ffd700;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #ffd700;
+  z-index: 10;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+
+.planet:hover {
+  transform: scale(1.5); /* Scale up the planet on hover */
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.mercury {
+  width: 10px;
+  height: 10px;
+  background-color: #8c7853;
+  animation: orbit 5s linear infinite;
+}
+
+.mercury-orbit {
+  width: 140px;
+  height: 140px;
+}
+
+.venus {
+  width: 15px;
+  height: 15px;
+  background-color: #ffa500;
+  animation: orbit 8s linear infinite;
+}
+
+.venus-orbit {
+  width: 200px;
+  height: 200px;
+}
+
+.earth {
+  width: 16px;
+  height: 16px;
+  background-color: #4169e1;
+  animation: orbit 10s linear infinite;
+}
+
+.earth-orbit {
+  width: 260px;
+  height: 260px;
+}
+
+.mars {
+  width: 14px;
+  height: 14px;
+  background-color: #ff4500;
+  animation: orbit 12s linear infinite;
+}
+
+.mars-orbit {
+  width: 320px;
+  height: 320px;
+}
+
+.jupiter {
+  width: 24px;
+  height: 24px;
+  background-color: #c69c6d;
+  animation: orbit 15s linear infinite;
+}
+
+.jupiter-orbit {
+  width: 400px;
+  height: 400px;
+}
+
+.saturn {
+  width: 22px;
+  height: 22px;
+  background-color: #ddaf6d;
+  animation: orbit 18s linear infinite;
+}
+
+.saturn-orbit {
+  width: 460px;
+  height: 460px;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(70px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(70px) rotate(-360deg);
+  }
+}
+
+.planet-info {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.planet-name {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}

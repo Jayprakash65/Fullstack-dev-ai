@@ -1,0 +1,324 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Section 1: Checkbox-based accordion styles */
+  .section_1 {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, min(100%, 30rem));
+    min-height: 30vh;
+    place-items: start;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+    color: #E85C0D;
+  }
+  
+  .accordion_1 h1 {
+    margin-left: 10px;
+  }
+  
+  /* Core functionality styles for Section 1 */
+  .section_1 .tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .section_1 .tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+  
+  .section_1 .tab input:checked ~ .tab__content {
+    max-height: 10rem;
+  }
+  
+  /* Visual styles for Section 1 */
+  .accordion_1 {
+    color: #E85C0D;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .section_1 .tab__label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    color: white;
+    background: #E85C0D;
+    cursor: pointer;
+  }
+  
+  /* Arrow icon for accordion items */
+  .section_1 .tab__label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+  }
+  
+  .section_1 .tab input:checked + .tab__label::after {
+    transform: rotate(270deg);
+  }
+  
+  .section_1 .tab__content p {
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  /* Section 2: Radio button-based accordion styles */
+  .section_2 {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, min(100%, 30rem));
+    min-height: 30vh;
+    place-items: start;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+    color: #7A1CAC;
+  }
+  
+  .accordion_2 h1 {
+    margin-left: 10px;
+  }
+  
+  /* Core functionality styles for Section 2 */
+  .tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+  }
+  
+  .tab input:checked ~ .tab__content {
+    max-height: 10rem;
+  }
+  
+  /* Visual styles for Section 2 */
+  .accordion_2 {
+    color: #7A1CAC;
+    border: 2px solid;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .section_2 .tab__label,
+  .tab__close {
+    display: flex;
+    color: white;
+    background: #7A1CAC;
+    cursor: pointer;
+  }
+  
+  .section_2 .tab__label {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  /* Arrow icon for accordion items */
+  .section_2 .tab__label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+  }
+  
+  .section_2 .tab input:checked + .tab__label::after {
+    transform: rotate(270deg);
+  }
+  
+  .section_2 .tab__content p {
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  .section_2 .tab__close {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Arrow animation on hover */
+  .section_2 .tab input:not(:checked) + .tab__label:hover::after {
+    animation: bounce .5s infinite;
+  }
+  
+  @keyframes bounce {
+    25% {
+      transform: rotate(90deg) translate(.25rem);
+    }
+    75% {
+      transform: rotate(90deg) translate(-.25rem);
+    }
+  }
+  
+  /* Section 3: Native HTML details/summary-based accordion styles */
+  .section_3 {
+   width: 50%;
+   margin: auto;
+   min-height: 30vh;
+  }
+  
+  .section_3 h1 {
+   margin-left: 10px;
+  }
+  
+  details {
+    margin: 5px;
+    font-size: 18px;
+  }
+  
+  details > * {
+    padding: .75rem;
+  }
+  
+  details > div {
+    background: #ddd;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  summary {
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background: #987070;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+    text-indent: 0px;
+  }
+  
+  /* Remove default arrow */
+  summary::marker {
+    content: "";
+  }
+  
+  /* Custom arrow icon */
+  summary::before {
+    content:"";
+    position: absolute;
+    inset: .75rem;
+    left: auto;
+    aspect-ratio: 1;
+    background: 
+     conic-gradient(from 90deg at 26% 26%, #0000 90deg, #fff 0) 
+      100% 100%/58% 58%;
+    clip-path: inset(1px);
+    transition: .3s;
+  }
+  
+  /* Rotate arrow when details are open */
+  details[open] summary::before {
+    transform: rotate(45deg);
+  }
+  
+  details[open] summary {
+    border-radius: 5px 5px 0 0;
+    background: #C8A1E0;
+    text-indent: 1rem;
+  }
+  
+  /* Section 4: Horizontal accordion styles */
+  .section_4 {
+    width: 50%; 
+    min-height: 50vh;
+    margin: auto;
+  }
+  
+  .accordion-item {
+    flex: 0 0 auto;
+    width: 80px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .accordion-item:hover {
+    width: 500px;
+  }
+  
+  .accordion-header {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* Color styles for each accordion item */
+  .head-1 { background: #CDE8E5; }
+  .head-2 { background: #FEEFAD; }
+  .head-3 { background: #FFCBCB; }
+  
+  .accordion-content {
+    padding: 20px;
+    width: 300px;
+    margin-left: 80px;
+    box-sizing: border-box;
+  }
+  
+  /* Section 5: Vertical accordion styles */
+  .section_5 {
+    width: 50%; 
+    min-height: 50vh;
+    margin: auto;
+  }
+  
+  .vertical_accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .v_accordion_item {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 60px;
+  }
+  
+  .v_accordion_item:hover {
+    max-height: 300px;
+  }
+  
+  .v_accordion_header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Color styles for each vertical accordion item */
+  .v_item_1 { background: #FFF2E1; }
+  .v_item_2 { background: #E3FEF7; }
+  .v_item_3 { background: #FFC7ED; }
+  
+  .v_accordion_content {
+    padding: 20px;
+    box-sizing: border-box;
+  }

@@ -1,0 +1,253 @@
+/* Resetting default margin, padding, and setting box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling the body with font, background color, and base settings */
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #212121; /* Dark background for the overall look */
+  }
+  
+  /* Main container style to hold the left and right sections */
+  .container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Styling for the left section */
+  .left {
+    width: 17%; /* Takes 17% of the width */
+    background-color: #171717; /* Darker shade than the main background */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Navigation at the top of the left section */
+  .left-nav {
+    padding: 20px;
+    border-bottom: 1px solid #2b2b2b; /* Divider between nav and history */
+  }
+  
+  /* Top section within left-nav, holds icons */
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Icon styles within the left navigation */
+  .icon img {
+    width: 24px; 
+    height: 24px;
+    cursor: pointer; /* Pointer on hover for interactivity */
+  }
+  
+  /* Chat history section with scroll capability */
+  .history {
+    padding: 20px;
+    overflow-y: auto; /* Allows vertical scrolling */
+    height: 100%; /* Occupies full height below the navigation */
+  }
+  
+  /* Style for each history item */
+  .history-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Hover effect for history items */
+  .history-item:hover {
+    background-color: #2b2b2b;
+  }
+  
+  /* Icons inside history items */
+  .history-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Styling for date labels (e.g., Today, Yesterday) */
+  .today {
+    color: #999;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  /* Styling for the right section */
+  .right {
+    width: 80%; /* Takes 80% of the width */
+    display: flex;
+    flex-direction: column;
+    background-color: #212121; /* Matches the main background */
+  }
+  
+  /* Top navigation bar in the right section */
+  .right-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #2b2b2b; /* Divider line */
+  }
+  
+  /* Individual navigation item styling */
+  .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Button styling for ChatGPT dropdown */
+  .chatgpt-btn {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* User icon style in the top-right corner */
+  .user-icon i {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Middle section styling, centering content */
+  .middle {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  /* Logo image style */
+  .logo img {
+    width: 70px;
+    margin-bottom: 40px;
+  }
+  
+  /* Container for quick action boxes */
+  .fourBox {
+    display: flex;
+    gap: 20px; /* Space between boxes */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Styling for each box */
+  .box {
+    display: flex;
+    flex-direction: column;
+    background-color: #212121;
+    padding: 15px;
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    border: #333 1px solid;
+    transition: background 0.3s ease; /* Smooth background change on hover */
+  }
+  
+  /* Icon inside each box */
+  .box i {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Unique color styling for icons in different boxes */
+  .box1 i {
+    color: #76D0EB; /* Light blue */
+  }
+  .box2 i {
+    color: #EC6262; /* Red */
+  }
+  .box3 i {
+    color: #E2C541; /* Yellow */
+  }
+  .box4 i {
+    color: #CB8BD0; /* Purple */
+  }
+  
+  /* Text inside each box */
+  .box p {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 14px;
+  }
+  
+  /* Hover effect for boxes */
+  .box:hover {
+    background-color: #444;
+  }
+  
+  /* Bottom section styling for input area */
+  .bottom {
+    display: flex;
+    justify-content: center; 
+    padding: 10px 20px;
+    border-top: 1px solid #2b2b2b; /* Divider line */
+    margin-bottom: 10px;
+  }
+  
+  /* Container for search input and buttons */
+  .search_container {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    padding: 12px;
+    border-radius: 50px;
+  }
+  
+  /* Common style for search and send icons */
+  .search-icon,
+  .send-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  /* Styling specifically for the send icon */
+  .send-icon {
+    background-color: #676767;
+    padding: 6px;
+    border-radius: 50%;
+  }
+  
+  /* Icons inside the search and send buttons */
+  .search-icon img,
+  .send-icon img {
+    width: 20px; 
+    height: 20px; 
+  }
+  
+  /* Container for the input field within search area */
+  .search-input {
+    flex: 1; /* Takes available space */
+    margin: 0 10px;
+  }
+  
+  /* Styling the input field for typing messages */
+  .search-input input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #fff;
+    outline: none; /* Removes default outline */
+  }
+  

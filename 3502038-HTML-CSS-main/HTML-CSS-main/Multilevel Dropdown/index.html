@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Level Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li class="has-dropdown">
+          <a href="#">Products</a>
+          <ul class="dropdown">
+            <li><a href="#">Electronics</a></li>
+            <li class="has-dropdown">
+              <a href="#">Clothing</a>
+              <ul class="dropdown">
+                <li><a href="#">Men's</a></li>
+                <li><a href="#">Women's</a></li>
+                <li><a href="#">Kids</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Books</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown">
+            <li><a href="#">Consulting</a></li>
+            <li><a href="#">Design</a></li>
+            <li class="has-dropdown">
+              <a href="#">Development</a>
+              <ul class="dropdown">
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Desktop</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

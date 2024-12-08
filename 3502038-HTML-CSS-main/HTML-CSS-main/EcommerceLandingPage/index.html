@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Landing Page</title>
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav>
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo-container">
+          <h1 class="logo-text">BAEFIKAR</h1>
+        </div>
+        <!-- Hamburger menu for mobile -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <!-- Navigation menu -->
+        <div class="menu-container">
+          <ul class="menu-list">
+            <li class="menu-item">New in<i class="fa fa-caret-down"></i></li>
+            <li class="menu-item">Women<i class="fa fa-caret-down"></i></li>
+            <li class="menu-item">Men<i class="fa fa-caret-down"></i></li>
+            <li class="menu-item">Bags<i class="fa fa-caret-down"></i></li>
+            <li class="menu-item">
+              Accessories<i class="fa fa-caret-down"></i>
+            </li>
+            <li class="menu-item">
+              Collections<i class="fa fa-caret-down"></i>
+            </li>
+          </ul>
+        </div>
+        <!-- Search and cart icons -->
+        <div class="action-container">
+          <div class="search-icon">
+            <i class="fa fa-search"></i>
+          </div>
+          <div class="cart-container">
+            <button class="cart-button">Cart - 0</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="home">
+      <div class="content">
+        <span class="header-indicator">● HEADER</span>
+        <h1 class="main-title">YOUR TITLE</h1>
+        <h1 class="main-title">IS HERE</h1>
+        <p class="subtitle">Subtitle, you can describe your product here</p>
+        <!-- Call-to-action buttons -->
+        <div class="cta-buttons">
+          <button class="shop-now">
+            SHOP NOW <i class="fa fa-arrow-right"></i>
+          </button>
+          <button class="watch-video">
+            <i class="fa fa-play"></i> WATCH THE VIDEO
+          </button>
+        </div>
+      </div>
+      <!-- Main product image -->
+      <div class="image">
+        <img src="assets/Home.png" alt="Product image" />
+      </div>
+      <!-- Image carousel dots -->
+      <div class="carousel">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- Categories section -->
+    <section class="card-container">
+      <div class="grid1">
+        <div class="card card1">
+          <h1>CATEGORIES</h1>
+          <p>your text that informs customers about this section...</p>
+        </div>
+        <div class="card card2">
+          <img src="assets/women.png" alt="" />
+          <span class="category-label">Women</span>
+        </div>
+        <div class="card card3">
+          <img src="assets/men.png" alt="" />
+          <span class="category-label">Men</span>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="card card4">
+          <img src="assets/accessories.png" alt="" />
+          <span class="category-label">Accessories</span>
+        </div>
+        <div class="card card5">
+          <img src="assets/bags.png" alt="" />
+          <span class="category-label">Bags</span>
+        </div>
+        <div class="card card6">
+          <button>All CATEGORIES <i class="fa fa-caret-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- New arrivals section -->
+    <section class="new-arrival">
+      <div class="new-arrival__header">
+        <h1 class="new-arrival__title">NEW ARRIVALS</h1>
+        <!-- Navigation arrows -->
+        <div class="new-arrival__navigation">
+          <i class="fa fa-caret-left nav-arrow"></i>
+          <i class="fa fa-caret-right nav-arrow"></i>
+        </div>
+      </div>
+      <!-- New arrival items grid -->
+      <div class="new-arrival__grid">
+        <!-- New arrival item 1 -->
+        <div class="new-arrival__item">
+          <img src="assets/arrival1.png" alt="" class="new-arrival__image" />
+          <p class="new-arrival__item-name">Item name 1</p>
+          <div class="new-arrival__dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="new-arrival__price">20$</span>
+        </div>
+        <!-- New arrival item 2 -->
+        <div class="new-arrival__item">
+          <img src="assets/arrival2.png" alt="" class="new-arrival__image" />
+          <p class="new-arrival__item-name">Item name 2</p>
+          <div class="new-arrival__dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="new-arrival__price">95$</span>
+        </div>
+        <!-- New arrival item 3 -->
+        <div class="new-arrival__item">
+          <img src="assets/arrival3.png" alt="" class="new-arrival__image" />
+          <p class="new-arrival__item-name">Item name 3</p>
+          <div class="new-arrival__dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="new-arrival__price">200$</span>
+        </div>
+        <!-- New arrival item 4 -->
+        <div class="new-arrival__item">
+          <img src="assets/arrival4.png" alt="" class="new-arrival__image" />
+          <p class="new-arrival__item-name">Item name 4</p>
+          <div class="new-arrival__dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+          </div>
+          <span class="new-arrival__price">195$</span>
+        </div>
+      </div>
+      <!-- View all button -->
+      <div class="new-arrival__view-all">
+        <div><button class="new-arrival__button">View All</button></div>
+      </div>
+    </section>
+
+    <!-- Fashion trends section -->
+    <section class="trends">
+      <div class="trends__header">
+        <p class="trends__label">LATEST NEWS</p>
+        <h1 class="trends__title">Fashion New Trends</h1>
+      </div>
+      <!-- Trends grid -->
+      <div class="trends__grid">
+        <!-- Trend item 1 -->
+        <div class="trends__item">
+          <img src="assets/trend1.png" alt="" class="trends__image" />
+          <div class="trends__content">
+            <div class="trends__date">
+              <i class="fa fa-calendar"></i>
+              <p>16 February 2024</p>
+            </div>
+            <h2 class="trends__item-title">
+              What Curling Irons Are The Best Ones
+            </h2>
+            <button class="trends__button">READ MORE</button>
+          </div>
+        </div>
+        <!-- Trend item 2 -->
+        <div class="trends__item">
+          <img src="assets/trend2.png" alt="" class="trends__image" />
+          <div class="trends__content">
+            <div class="trends__date">
+              <i class="fa fa-calendar"></i>
+              <p>20 March 2024</p>
+            </div>
+            <h2 class="trends__item-title">Eternity Bands Do Last Forever</h2>
+            <button class="trends__button">READ MORE</button>
+          </div>
+        </div>
+        <!-- Trend item 3 -->
+        <div class="trends__item">
+          <img src="assets/trend3.png" alt="" class="trends__image" />
+          <div class="trends__content">
+            <div class="trends__date">
+              <i class="fa fa-calendar"></i>
+              <p>17 August 2024</p>
+            </div>
+            <h2 class="trends__item-title">
+              The Health Benefits Of Sunglasses
+            </h2>
+            <button class="trends__button">READ MORE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+      <div class="footer-content">
+        <!-- Logo and email subscription -->
+        <div class="footer-section logo-section">
+          <h1>LOGO</h1>
+          <p>Exclusive offers and first access to products</p>
+          <div class="email-subscription">
+            <input type="email" placeholder="E-mail" />
+            <i class="fa fa-caret-right"></i>
+          </div>
+          <p class="privacy-text">Your Privacy Policy warning text here.</p>
+        </div>
+
+        <!-- Service links -->
+        <div class="footer-section">
+          <ul class="footer-links">
+            <li class="footer-title">SERVICE</li>
+            <li>Contact</li>
+            <li>Shipping</li>
+            <li>Returns</li>
+            <li>Size Guide</li>
+            <li>Help Center</li>
+            <li>Dealers</li>
+          </ul>
+        </div>
+
+        <!-- Company links -->
+        <div class="footer-section">
+          <ul class="footer-links">
+            <li class="footer-title">COMPANY</li>
+            <li>About</li>
+            <li>Product</li>
+            <li>Responsibility</li>
+            <li>Career</li>
+            <li>Press</li>
+            <li>Image bank</li>
+          </ul>
+        </div>
+
+        <!-- Terms links -->
+        <div class="footer-section">
+          <ul class="footer-links">
+            <li class="footer-title">TERMS</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy Policy</li>
+            <li>Cookie Policy</li>
+          </ul>
+        </div>
+
+        <!-- Social media links -->
+        <div class="footer-section social-section">
+          <div><button>INSTAGRAM</button></div>
+          <div><button>FACEBOOK</button></div>
+          <div><button>PINTEREST</button></div>
+          <div><button>LINKEDIN</button></div>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <div><p>© LOGO 2022. ALL RIGHTS RESERVED</p></div>
+        <div class="payment-methods">
+          <p>ACCEPTED PAYMENT METHODS</p>
+          <!-- Payment method icons can be added here -->
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

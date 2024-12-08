@@ -1,0 +1,68 @@
+/* Apply a default font and make sure padding and margin calculations include borders */
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Style for the body: light background color and center the content horizontally */
+body {
+    background-color: #EBECF0; /* Light grey background */
+    display: flex; /* Use flexbox to arrange content */
+    justify-content: center; /* Center the content horizontally */
+}
+
+/* Main container for the resume header */
+.Header {
+    background-color: #fff; /* White background for the resume section */
+    width: 60%; /* Set the width to 60% of the viewport */
+    padding: 30px; /* Add padding inside the container */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow effect around the container */
+}
+
+/* Style for horizontal line (hr) separating sections */
+.styled-hr {
+    border: none; /* Remove the default border */
+    height: 2px; /* Set thickness for the horizontal line */
+    background-color: #1d62cb; /* Blue color for the horizontal line */
+    margin: 10px 0; /* Add space above and below the line */
+}
+
+/* Style for the section headings */
+h4 {
+    color: #1d62cb; /* Blue color for section titles */
+    margin-left: 10px; /* Add a small left margin */
+}
+
+/* Style for the name in the header */
+.intro h1 {
+    color: #1d62cb; /* Blue color for the name */
+    font-weight: 600; /* Make the font slightly bold */
+    font-size: 40px; /* Large font size */
+}
+
+/* Style for the job title in the header */
+.intro h3 {
+    font-size: 25px; /* Slightly smaller font for the job title */
+}
+
+/* Technical skills section: arrange skill categories horizontally using flexbox */
+.technicalskills .row {
+    display: flex; /* Use flexbox to arrange the skill sets in a row */
+    justify-content: space-between; /* Spread the skill columns evenly */
+}
+
+/* Style for the skill lists: remove bullet points */
+.technicalskills .row ul {
+    list-style: none; /* Remove the default bullet points */
+}
+
+/* Flexbox layout for professional experience: title and dates in a row */
+.row-1, .row-3 {
+    display: flex; /* Use flexbox to arrange content in a row */
+    justify-content: space-between; /* Align content to opposite sides */
+}
+
+/* Bold the titles of the job positions */
+.row-1 p, .row-3 p {
+    font-weight: 900; /* Set font weight to bold */
+}

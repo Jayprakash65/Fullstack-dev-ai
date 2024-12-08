@@ -1,0 +1,1051 @@
+/* General reset */
+/* Global Reset: Ensures consistent padding, margin, and box-sizing across browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Navbar container: Sticky navigation bar that stays on top when scrolling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+/* Nav container: Full width and centered with maximum width to limit stretching */
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Logo styling: Controls the logo size */
+.logo {
+  max-height: 40px;
+}
+
+/* Navigation menu container */
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation links container */
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+/* Individual navigation link list item styling */
+.nav-links li {
+  margin: 0 15px;
+}
+
+/* Link styling for navigation items */
+.nav-links a {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Hover effect on navigation links */
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Apply button styling */
+.apply-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Apply button hover effect */
+.apply-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Hamburger menu (for mobile): Initially hidden */
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive styles: When screen width is 768px or less */
+@media screen and (max-width: 768px) {
+  /* Flex wrap to fit smaller screen */
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  /* Hide menu until hamburger is clicked */
+  .menu {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  /* Show menu when hamburger is clicked (menu-toggle is checked) */
+  .menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  /* Center navigation links in mobile view */
+  .nav-links {
+    flex-direction: column;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  /* Adjust margins for mobile view */
+  .nav-links li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  /* Apply button margin adjustment in mobile view */
+  .apply-btn {
+    margin: 15px 0;
+  }
+
+  /* Display hamburger icon in mobile view */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hamburger icon transformation (open/close animation) */
+  .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}
+
+/* More responsive styles for smaller screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  /* Smaller logo for mobile view */
+  .logo {
+    max-height: 30px;
+  }
+
+  /* Smaller font size for nav links in mobile view */
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  /* Smaller apply button in mobile view */
+  .apply-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Home section container: Flexbox layout to center content horizontally */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+/* Container for the home section content */
+.home-container {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Left side content of the home section */
+.left-content {
+  flex: 1;
+  max-width: 600px;
+  padding-right: 40px;
+}
+
+/* Main heading in the left content */
+.left-content h1 {
+  font-size: 3rem;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+/* Subheading in the left content */
+.left-content h3 {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Styling for sub-heading text */
+.sub-heading {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Styling for issuer logos in the left content */
+.issuer-logos {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+/* Description text styling */
+.left-content .description {
+  font-size: 1rem;
+  color: #444;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-weight: 100;
+}
+
+/* Apply now button styling */
+.apply-now-btn {
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Apply button hover effect */
+.apply-now-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Right content of the home section */
+.right-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the promotional video */
+.promo-video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media screen and (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Left content centered in mobile view */
+  .left-content {
+    max-width: 100%;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  /* Adjust right content width */
+  .right-content {
+    width: 100%;
+  }
+}
+
+/* Further responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .left-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .left-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .sub-heading {
+    font-size: 1.1rem;
+  }
+
+  .left-content .description {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Smallest screen adjustments */
+  .left-content h1 {
+    font-size: 2rem;
+  }
+
+  .left-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .sub-heading {
+    font-size: 1rem;
+  }
+
+  .left-content .description {
+    font-size: 0.8rem;
+  }
+
+  /* Smaller button size for mobile view */
+  .apply-now-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Section: Fees section styling */
+.fees-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  text-align: center;
+  padding: 50px 20px;
+  font-family: "Arial", sans-serif;
+  height: 50vh;
+}
+
+/* Main title styling for fees section */
+.main-title .main-heading {
+  font-size: 3rem; /* Large font for the main heading */
+  font-weight: 400;
+  background: linear-gradient(to right, #0077ff, #00ff77); /* Gradient text */
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+/* Individual fee list items styling */
+.fee-list .fee-item {
+  font-size: 2.5rem; /* Slightly smaller font for fee items */
+  font-weight: 300;
+  margin: 10px 0;
+  color: #fff; /* White text */
+}
+
+/* General section styling for the "powerful" section */
+.powerful-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+/* Flexbox container to arrange video, image, and text */
+.powerful-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Container for video */
+.video-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+.promo-video {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Text container in the powerful section */
+.text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 500px;
+}
+
+/* Image styling within text container */
+.phone-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Title text in the powerful section */
+.title {
+  font-size: 60px;
+  font-weight: lighter;
+  color: black;
+  margin: 0;
+  line-height: 1;
+}
+
+/* Description text in the text container */
+.text-container .description {
+  font-size: 24px;
+  color: #666;
+  max-width: 450px;
+  line-height: 1.5;
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 1024px) {
+  .powerful-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust video and text container size for smaller screens */
+  .video-container, .text-container {
+    max-width: 100%;
+  }
+
+  /* Center align text in mobile view */
+  .text-container {
+    align-items: center;
+  }
+
+  /* Center align description text */
+  .text-container .description {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* Further responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+
+  /* Smaller description text for smaller screens */
+  .text-container .description {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+
+  /* Further scaling down of text size for mobile view */
+  .text-container .description {
+    font-size: 18px;
+  }
+
+  /* Adjust margins for mobile */
+  .powerful-section {
+    margin: 20px 0;
+  }
+}
+
+
+
+/* Section styling */
+/* Metal Section: A section with a light grey background and padding for spacing */
+.metal-section {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Metal Container: Flexbox layout to center and align image, text, and video */
+.metal-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Text and Image Container: Holds both text and image */
+.text-image-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Metal Card Image: Full width image with auto height */
+.metal-card-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Metal Title: Large text for the title of the section */
+.metal-title {
+  font-size: 60px;
+  font-weight: lighter;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* Metal Description: Grey, lighter-weight text for the description */
+.metal-description {
+  font-size: 24px;
+  color: #666;
+  line-height: 1.6;
+  font-weight: lighter;
+}
+
+/* Video Container: Holds the promotional video */
+.video-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Promo Video: Ensures video is responsive and fits within its container */
+.promo-video {
+  width: 100%;
+}
+
+/* Responsive design for screens 1024px and smaller */
+@media screen and (max-width: 1024px) {
+  /* Stack containers vertically */
+  .metal-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure containers take up full width */
+  .text-image-container, .video-container {
+    max-width: 100%;
+  }
+}
+
+/* Responsive design for screens 768px and smaller */
+@media screen and (max-width: 768px) {
+  /* Reduce padding and font size for smaller screens */
+  .metal-section {
+    padding: 30px 0;
+  }
+
+  .metal-title {
+    font-size: 48px;
+  }
+
+  .metal-description {
+    font-size: 20px;
+  }
+}
+
+/* Responsive design for screens 480px and smaller */
+@media screen and (max-width: 480px) {
+  /* Further reduce title and description size for mobile */
+  .metal-title {
+    font-size: 36px;
+  }
+
+  .metal-description {
+    font-size: 18px;
+  }
+
+  /* Reduce the gap between elements */
+  .metal-container {
+    gap: 20px;
+  }
+}
+
+/* Blog Section: Container for blog section content */
+.our-blog {
+  padding: 50px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Blog Container: Centers and adds max-width for the blog section */
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Blog Title: Large heading for the blog section */
+.blog-title h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Explore Latest Section: Small description text under the title */
+.explore-latest p {
+  font-size: 20px;
+  color: #666;
+  text-align: left;
+  margin-bottom: 30px;
+  font-weight: lighter;
+}
+
+/* Blog Cards Container: Flexbox layout to hold individual blog cards */
+.blog-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Individual Blog Card: Contains image and text for each blog post */
+.card {
+  background-color: white;
+  width: 100%;
+  max-width: 350px;
+  overflow: hidden;
+  text-align: left;
+}
+
+/* Card Image: Full-width blog post image */
+.card-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eee;
+  border-radius: 10px;
+}
+
+/* Card Content: Container for blog post text */
+.card-content {
+  padding: 20px;
+}
+
+/* Blog Date: Small text for the date of the blog post */
+.blog-date {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+/* Blog Title: Slightly larger title for the blog post */
+.blog-title {
+  font-size: 18px;
+  color: #7d7c7c;
+  font-weight: lighter;
+}
+
+/* View All Button: Button to view all blog posts */
+.view-all {
+  margin-top: 20px;
+}
+
+.view-all-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the "View All" button */
+.view-all-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design for screens 1200px and smaller */
+@media screen and (max-width: 1200px) {
+  .blog-cards {
+    justify-content: center;
+  }
+  
+  /* Adjust blog cards to be 50% width */
+  .card {
+    max-width: calc(50% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+/* Responsive design for screens 768px and smaller */
+@media screen and (max-width: 768px) {
+  /* Make blog cards full width on small screens */
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Responsive design for screens 480px and smaller */
+@media screen and (max-width: 480px) {
+  /* Reduce padding and font sizes for smaller screens */
+  .card-content {
+    padding: 15px;
+  }
+  
+  .blog-title {
+    font-size: 16px;
+  }
+  
+  .view-all-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Banking Section: Full-width section with grey background and centered content */
+.Banking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F2F2;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Banking Container: Centers content with a maximum width */
+.banking-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Banking Heading: Large font for the section heading */
+.banking-container h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Banking Paragraph: Smaller description text for the section */
+.banking-container p {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 800px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-weight: lighter;
+}
+
+/* Banking Image: Centers the image with auto height and width */
+.banking-container img {
+  max-width: 100%;
+  height: auto;
+  width: 400px;
+}
+
+/* Responsive design for screens 768px and smaller */
+@media screen and (max-width: 768px) {
+  /* Reduce heading and paragraph size for tablets */
+  .banking-container h1 {
+    font-size: 36px;
+  }
+
+  .banking-container p {
+    font-size: 16px;
+  }
+}
+
+/* Responsive design for screens 480px and smaller */
+@media screen and (max-width: 480px) {
+  /* Reduce padding for mobile screens */
+  .Banking {
+    padding: 30px 15px;
+  }
+
+  /* Further reduce heading and paragraph sizes for mobile */
+  .banking-container h1 {
+    font-size: 28px;
+  }
+
+  .banking-container p {
+    font-size: 14px;
+  }
+
+  /* Make the image full width on small screens */
+  .banking-container img {
+    width: 100%;
+  }
+}
+
+/* FOOTER */
+/* Footer section: Sets background color to dark and text color to white */
+.footer {
+  background-color: #181818;
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer container: Flexbox layout that centers and aligns content */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer content: Centers text and provides spacing below */
+.footer-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Footer logo: Large, bold logo for the footer */
+.footer-logo {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Footer tagline: Provides a tagline under the logo */
+.footer-tagline {
+  margin-bottom: 30px;
+}
+
+/* "Crafted in India" badge styling with black background and rounded corners */
+.crafted-in-india {
+  font-size: 14px;
+  background-color: #000000;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+/* "We are all ears" text styling with larger blue-colored font */
+.we-are-all-ears {
+  font-size: 28px;
+  color: #3b82f6;
+  margin-bottom: 15px;
+}
+
+/* Footer description: Medium-sized text with line spacing for readability */
+.footer-description {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Social media section: Provides top margin for spacing */
+.footer-social {
+  margin-top: 30px;
+}
+
+/* Footer social media heading */
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Social icons container: Centers icons and adds spacing between them */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Social icon styles: Sets size and color for icons */
+.social-icons i {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+/* Footer links section: Flexbox layout for links, adjusts with screen size */
+.footer-links {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Individual footer column: Flex item that adjusts based on screen size */
+.footer-column {
+  flex: 1 1 250px;
+  margin-bottom: 20px;
+}
+
+/* Footer column heading: Larger text with blue color */
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #3b82f6;
+}
+
+/* Footer column links: Links styled with color and spacing between them */
+.footer-column a {
+  display: block;
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Footer column links hover effect: Changes color when hovered */
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+/* Copyright section: Flexbox layout that centers content */
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+/* Copyright image: Sets a maximum width and auto height */
+.copyright img {
+  max-width: 50%;
+  height: auto;
+  padding: 10px;
+}
+
+/* Copyright text: Grey text with smaller font size and light weight */
+copyright p {
+  color: #cbcaca;
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
+}
+
+/* Responsive design for screens 768px and smaller */
+@media screen and (max-width: 768px) {
+  /* Stack footer links vertically on smaller screens */
+  .footer-links {
+    flex-direction: column;
+  }
+
+  /* Adjust footer columns to full width on smaller screens */
+  .footer-column {
+    flex: 1 1 100%;
+  }
+
+  /* Adjust font size of "We are all ears" text */
+  .we-are-all-ears {
+    font-size: 24px;
+  }
+
+  /* Reduce font size of footer description for better readability */
+  .footer-description {
+    font-size: 14px;
+  }
+
+  /* Reduce social icons size for smaller screens */
+  .social-icons i {
+    font-size: 24px;
+  }
+
+  /* Adjust image width for copyright section */
+  .copyright img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Adjust font size of copyright text */
+  .copyright p {
+    font-size: 14px;
+  }
+}
+
+/* Responsive design for screens 480px and smaller */
+@media screen and (max-width: 480px) {
+  /* Reduce padding for mobile devices */
+  .footer {
+    padding: 30px 15px;
+  }
+
+  /* Reduce font size of the footer logo for mobile */
+  .footer-logo {
+    font-size: 28px;
+  }
+
+  /* Adjust font size for the "We are all ears" text */
+  .we-are-all-ears {
+    font-size: 20px;
+  }
+
+  /* Reduce the "Crafted in India" badge size and padding */
+  .crafted-in-india {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  /* Reduce footer social heading size */
+  .footer-social h3 {
+    font-size: 16px;
+  }
+
+  /* Further reduce the size of social icons */
+  .social-icons i {
+    font-size: 20px;
+  }
+
+  /* Reduce footer column heading size */
+  .footer-column h4 {
+    font-size: 16px;
+  }
+
+  /* Reduce footer column link font size */
+  .footer-column a {
+    font-size: 12px;
+  }
+}

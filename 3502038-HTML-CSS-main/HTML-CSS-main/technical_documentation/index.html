@@ -1,0 +1,102 @@
+</html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <main id="main-doc">
+      
+     <nav id="navbar">
+      <header id="header"> Version Control Documentation</header>
+      <ul>
+       <li> <a href="#introduction" class="nav-link"> Introduction </a> </li>
+       <li> <a href="#prerequisites" class="nav-link"> Prerequisites </a> </li>
+       <li> <a href="#git_and_github" class="nav-link">Git & GtiHub</a> </li>
+       <li> <a href="#git_clone" class="nav-link"> Git Clone </a> </li>
+       <li> <a href="#git_add" class="nav-link"> Git Add </a> </li>
+       <li> <a href="#git_commit" class="nav-link"> Git Commit </a> </li>
+       <li> <a href="#git_push" class="nav-link"> Git Push </a> </li>
+       <li> <a href="#reference" class="nav-link"> Reference </a> </li>
+     </ul>
+    </nav>
+
+      <section class="main-section" id="introduction"> 
+    
+        <header> Introduction </header>
+        <p> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+            Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+    </p>
+   </section>
+
+     <section class="main-section" id="prerequisites">
+       <header> Prerequisites </header>
+       <p>
+        <b>This guide assumes you have the following basic background:</b>
+         <ul> 
+            <li> A general understanding of Internet </li>
+            <li> Good working knowledge of linux and Filesystem . </li>
+            <li> Some programming experience.</li>
+         </ul>
+    </p>
+    </section >
+    
+    <section class="main-section" id="git_and_github">
+      <header> Git & GitHub </header>
+      <p> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+        Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.</p> 
+    </section>
+   
+    <section class="main-section" id="git_clone">
+      <header> Git Clone <Repository link Here> </header>
+      <p> git clone is used to create a copy of an existing Git repository from a remote server, such as GitHub, GitLab, or Bitbucket, onto your local machine.
+        
+        <code> git clone <Repo Link here > </code>
+            It downloads all the project files, history, branches, and commits, so you can work on the project locally. </p>
+    </section>
+   
+    <section class="main-section" id="git_add">
+      <header> Git Add </header>
+      <p> The git add command is used in Git to add changes in the working directory to the staging area. This is the first step in the Git workflow before committing changes. Once files or changes are added to the staging area, you can commit them with git commit.
+        There are multiple ways you can do a git add, add a file in git.
+        <ul>
+            <li>Adding All files <code>git add .</code></li>
+            <li>Adding specific file<code>git add filename</code></li>
+            <li> Adding whole Directory <code>git add directory/ </code></li>
+            <li> Adding all files of specific type<code>git add *.txt</code></li>
+        </ul>
+    </p>
+    </section>
+   
+    <section class="main-section" id="git_commit">
+      <header> Git Commit </header>
+      <p>
+        The git commit command <code> git commit </code>is used in Git to save your staged changes to the local repository. Once you've added files or changes to the staging area with git add, you can commit them to capture a snapshot of your project's history. </p>
+        <ul>
+            <li>Commit with inline short message <code>git commit -m "Your commit message" </code></li>
+            <li>Commit only specific file<code>git commit filename -m "Message"            </code></li>
+            <li> Amend the previous commit <code> git commit --amend   </code></li>
+        </ul>
+    </section>
+    
+    <section class="main-section" id="git_push">
+     <header> Git Push </header>
+      <p>The git push command is used to upload your local repository commits to a remote repository, such as GitHub, GitLab, or Bitbucket. It essentially "pushes" the changes you've made locally to a remote server so that others (or you from another machine) can access and collaborate on those changes.
+        <ul>
+            <li>Push to the default remote branch (usually origin): <code>git push   </code></li>
+            <li>Push to a specific remote and branch:<code>git push origin < branch-name >     </code></li>
+            <li> Push all branches <code> git push --all</code></li>
+            <li> Force Push <code> git push --force</code></li>
+        </ul>
+        </p>
+    </section>
+    
+    <section class="main-section" id="reference">
+      <header> Reference</header>
+      <p> 
+        <ul> All the documentation in this page is taken from .... <a href="https://git-scm.com/docs" class="referral-link"> Git Documentation </a></ul>
+    </section>
+  </main>
+    
+</html>

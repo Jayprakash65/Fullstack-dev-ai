@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+.piano {
+  display: flex;
+  position: relative;
+  width: 700px;
+  height: 300px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.key {
+  flex-grow: 1;
+  position: relative;
+  border-right: 2px solid #333;
+}
+.white-key {
+  background-color: #fff;
+  height: 100%;
+  z-index: 1;
+}
+.black-key {
+  position: absolute;
+  background-color: #000;
+  width: 60%;
+  height: 60%;
+  right: -30%;
+  z-index: 2;
+}
+.key:last-child {
+  border-right: none;
+}
+.key input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 3;
+}
+.note {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: float 2s ease-out;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+@keyframes float {
+  0% {
+    opacity: 1;
+    bottom: 100%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 300%;
+  }
+}
+.key input:active + .note {
+  opacity: 1;
+}
+.white-key .note {
+  background-color: #3498db;
+}
+.black-key .note {
+  background-color: #e74c3c;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion with Pure CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <!-- Section 1: Checkbox-based accordion -->
+    <section class="section_1">
+      <div class="accordion_1">
+        <h1>Accoridon - 1</h1>
+        <!-- Accordion item 1 -->
+        <div class="tab">
+          <input type="checkbox" name="accordion-1" id="cb1" checked />
+          <label for="cb1" class="tab__label">Checkbox</label>
+          <div class="tab__content">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              unde sit architecto ab dolorem maxime odio reiciendis cumque
+              beatae nemo?
+            </p>
+          </div>
+        </div>
+        <!-- Accordion item 2 -->
+        <div class="tab">
+          <input type="checkbox" name="accordion-1" id="cb2" />
+          <label for="cb2" class="tab__label">Open multiple</label>
+          <div class="tab__content">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit
+              unde sit architecto ab dolorem maxime odio reiciendis cumque
+              beatae nemo?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Radio button-based accordion -->
+    <section class="section_2">
+      <div class="accordion_2">
+        <h1>Accoridon - 2</h1>
+        <!-- Accordion item 1 -->
+        <div class="tab">
+          <input type="radio" name="accordion-2" id="rd1" />
+          <label for="rd1" class="tab__label">Radio</label>
+          <div class="tab__content">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              commodi nostrum itaque, iure id officia atque quia quidem
+              consequatur perferendis praesentium a porro, aperiam, rerum illum
+              possimus odio quaerat quis.
+            </p>
+          </div>
+        </div>
+        <!-- Accordion item 2 -->
+        <div class="tab">
+          <label for="rd2" class="tab__label">Open single</label>
+          <input type="radio" name="accordion-2" id="rd2" />
+          <div class="tab__content">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore
+              quaerat adipisci animi impedit quam officia perferendis facilis
+              sed necessitatibus dolorum, soluta et sit voluptatem laboriosam,
+              nesciunt molestiae, quo provident quibusdam?
+            </p>
+          </div>
+        </div>
+        <!-- Close button for the accordion -->
+        <div class="tab">
+          <input type="radio" name="accordion-2" id="rd3" />
+          <label for="rd3" class="tab__close">Close open tab &times;</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Native HTML details/summary-based accordion -->
+    <section class="section_3">
+      <div class="accordion">
+        <h1>Accoridon - 3</h1>
+        <!-- Accordion item 1 -->
+        <details>
+          <summary>Day 1</summary>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+            praesentium nobis tempora, repellendus dolore eum illum sit cumque!
+            Omnis quo, cupiditate odit blanditiis quod magni atque et, molestiae
+            eveniet nostrum natus culpa iure, perspiciatis ipsa nemo sed.
+            Sapiente, excepturi praesentium, consequatur provident veritatis
+            quos, fuga voluptas impedit suscipit sed ad.
+          </div>
+        </details>
+        <!-- Accordion item 2 -->
+        <details>
+          <summary>Day 2</summary>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+            praesentium nobis tempora, repellendus dolore eum illum sit cumque!
+            Omnis quo
+          </div>
+        </details>
+        <!-- Accordion item 3 -->
+        <details>
+          <summary>Day 3</summary>
+          <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+            praesentium nobis tempora, repellendus dolore eum illum sit cumque!
+            Omnis quo, cupiditate odit blanditiis quod magni atque et, molestiae
+            eveniet nostrum natus culpa iure, perspiciatis ipsa nemo sed.
+            Sapiente, excepturi praesentium, consequatur provident veritatis
+            quos, fuga voluptas impedit suscipit sed ad.
+          </div>
+        </details>
+      </div>
+    </section>
+    
+    <!-- Section 4: JavaScript-based accordion (requires accompanying JS) -->
+    <section class="section_4">
+      <div class="accordion_4"></div>
+      <h1>Accoridon - 4</h1>
+        <!-- Accordion item 1 -->
+        <div class="accordion-item head-1">
+            <div class="accordion-header">Section 1</div>
+            <div class="accordion-content">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero magnam, sint sed totam suscipit consequatur! Vel quam eius totam alias.</p>
+            </div>
+        </div>
+        <!-- Accordion item 2 -->
+        <div class="accordion-item head-2">
+            <div class="accordion-header">Section 2</div>
+            <div class="accordion-content">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus eligendi delectus alias quod at officiis?</p>
+            </div>
+        </div>
+        <!-- Accordion item 3 -->
+        <div class="accordion-item head-3">
+            <div class="accordion-header">Section 3</div>
+            <div class="accordion-content">
+                <h2>Section 3</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit ratione ab aliquid libero dicta! Quibusdam, sint beatae.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Section 5: Vertical accordion (likely CSS-based) -->
+    <section class="section_5">
+      <h1>Accordion - 5</h1>
+      <div class="vertical_accordion">
+          <!-- Vertical accordion item 1 -->
+          <div class="v_accordion_item v_item_1">
+              <div class="v_accordion_header">Section 1</div>
+              <div class="v_accordion_content">
+                  <h2>Section 1</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus iusto assumenda totam vitae sapiente commodi debitis eveniet ad!</p>
+              </div>
+          </div>
+          <!-- Vertical accordion item 2 -->
+          <div class="v_accordion_item v_item_2">
+              <div class="v_accordion_header">Section 2</div>
+              <div class="v_accordion_content">
+                  <h2>Section 2</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione blanditiis quia dolore. Vero ipsam perspiciatis, sapiente rem aliquid debitis labore quisquam ratione, repellendus soluta quod!</p>
+              </div>
+          </div>
+          <!-- Vertical accordion item 3 -->
+          <div class="v_accordion_item v_item_3">
+              <div class="v_accordion_header">Section 3</div>
+              <div class="v_accordion_content">
+                  <h2>Section 3</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perferendis veritatis impedit possimus cumque molestiae in fugiat repellendus eligendi! Ad?</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+.breadcrumb {
+    padding: 0 .5rem;
+    color: blueviolet;
+  }
+  
+  .breadcrumb ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: brown;
+  }
+  
+  .breadcrumb li:not(:last-child)::after {
+    display: inline-block;
+    margin: 0 .25rem;
+    content: "→";
+    color:greenyellow;
+  }
+
+  
+  .air1 li
+{
+  display: inline-block;
+  padding: 15px;
+  background: #4CAF50;
+  cursor: pointer;
+  box-shadow: 0 4px #999;
+  border-radius: 7px;
+}
+.air2 li
+{
+  display: inline-block;
+  padding: 15px;
+  background: orange;
+  cursor: pointer;
+  opacity: 0.8;
+  margin-left: 6px;
+}
+.air3 li
+{
+  display: inline-block;
+  padding: 15px;
+  background: #3399ff;
+  transform: skew(-20deg);
+  cursor: pointer;
+  opacity: 0.8;
+  margin-left: 10px;
+}
+
+.air4 li
+{
+  display: inline-block;
+  padding: 15px;
+  background: #b57070;
+  transform: skew(-20deg);
+  cursor: pointer;
+  opacity: 0.8;
+  margin-left: 10px;
+  border-radius: 7px;
+  
+}
+

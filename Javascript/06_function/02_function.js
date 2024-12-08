@@ -13,6 +13,13 @@ Arrow Function:
 
 // First-class: Datatypes: store in a variable, pass as argument, return
 
+/* 
+You can store them in variables, pass them as arguments, and even return them from other functions.
+
+*/
+
+
+
 // // Traditinal function
 // function sayHi(){
 //     console.log("Radhe Radhe");

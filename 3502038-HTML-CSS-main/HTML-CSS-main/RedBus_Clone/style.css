@@ -1,0 +1,1381 @@
+/* Reset styles to remove default browser margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Base styles for the navigation bar */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the nav covers the full width */
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 1px 5px #0000001a;
+  z-index: 1000; /* Ensures the nav stays on top of other elements */
+}
+
+/* Logo section styles */
+.nav-left .logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+.left {
+  display: flex;
+}
+
+/* Center section with ticket options */
+.nav-center {
+  display: flex;
+  margin-left: 50px;
+  gap: 20px; /* Added for consistent spacing between items */
+}
+
+.nav-center .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-center .nav-item img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Bus ticket specific styling */
+.nav-center .Busticket {
+  display: flex;
+  background-color: #d84e56;
+}
+
+.nav-center .Busticket p {
+  color: white;
+}
+
+/* Right section for help, language, and account */
+.right {
+  display: flex;
+  gap: 20px;
+}
+
+.right .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 0.6s ease;
+}
+
+.right .nav-item:hover {
+  background-color: #dddbdb;
+}
+
+.right .nav-item img {
+  width: 20px;
+  height: 20px;
+}
+
+/* General styling for all nav items */
+.nav-item p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Hover effects for nav items */
+.nav-item:hover img {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive styles for mobile view */
+@media (max-width: 768px) {
+  /* For screens smaller than 768px (tablets and smaller) */
+  
+  /* Flex items in the nav become a column on smaller screens */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  /* Left section including logo and center items stack vertically */
+  .left {
+    flex-direction: column;
+    width: 100%; /* Take full width on smaller screens */
+  }
+
+  /* Center section (Bus Tickets and Train Tickets) */
+  .nav-center {
+    margin-left: 0;
+    width: 100%; /* Full width */
+    gap: 10px;
+    justify-content: space-around; /* Even space between items */
+  }
+
+  .nav-center .nav-item {
+    flex-direction: row; /* Align items horizontally */
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 12px;
+  }
+
+  /* Right section (Help, Language, Account) */
+  .right {
+    width: 100%; /* Full width */
+    justify-content: space-around;
+    margin-top: 10px; /* Space from the left section */
+  }
+
+  .right .nav-item {
+    padding: 10px;
+  }
+
+  /* Reduce logo size */
+  .nav-left .logo {
+    width: 100px; /* Smaller logo for mobile screens */
+  }
+  
+  /* Font and icon size adjustments for smaller screens */
+  .nav-item p {
+    font-size: 12px;
+  }
+
+  .nav-center .nav-item img, .right .nav-item img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Responsive settings for very small mobile screens (below 480px) */
+@media (max-width: 480px) {
+  nav {
+    padding: 10px;
+  }
+
+  .nav-item p {
+    font-size: 11px;
+  }
+
+  .nav-left .logo {
+    width: 80px;
+  }
+
+  .nav-center .nav-item img, .right .nav-item img {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Adjust padding for better mobile experience */
+  .nav-center .nav-item, .right .nav-item {
+    padding: 8px;
+  }
+}
+
+/* Home section styles */
+/* General styling for all screen sizes */
+.home {
+  background: url("assets/HomeBannerNew.png") no-repeat center/cover;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.home h1 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  padding: 0 15px; /* Add padding to prevent text from touching the screen edges */
+}
+
+/* Search section styles */
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+/* Search box styles */
+.search-box {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+/* Search fields styles */
+.search-field {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 10px; /* Spacing between icon and text */
+  border-right: 1px solid #e0e0e0;
+}
+
+.search-field input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #333;
+  width: 150px;
+  padding: 5px;
+}
+
+.search-field img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Search button styles */
+.search-button {
+  background-color: #d84e56;
+  border: none;
+  padding: 20px 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive design - for smaller screens (tablets and mobile) */
+@media (max-width: 768px) {
+  .home {
+    height: auto;
+    padding: 20px;
+    background-size: 100%; /* Adjust background size */
+  }
+
+  .home h1 {
+    font-size: 24px;
+    padding: 0 10px;
+  }
+
+  .search-box {
+    flex-direction: column; /* Stack search fields vertically */
+    width: 90%;             /* Adjust width to fit smaller screens */
+    border-radius: 20px;
+  }
+
+  .search-field {
+    border-right: none; /* Remove borders for stacked layout */
+    border-bottom: 1px solid #e0e0e0; /* Add a bottom border for separation */
+    width: 100%;
+    justify-content: space-between; /* Make input and icon more spaced out */
+  }
+
+  .search-field input {
+    width: calc(100% - 50px); /* Adjust width of input to fit inside field */
+  }
+
+  .search-button {
+    border-radius: 0 0 20px 20px; /* Adjust for stacked layout */
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+}
+
+/* Responsive design - for very small mobile screens (less than 480px) */
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 20px;
+  }
+
+  .search-box {
+    width: 95%; /* Ensure it fits on very small screens */
+  }
+
+  .search-field {
+    padding: 10px 15px;
+  }
+
+  .search-field img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .search-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Trending Offers Section styles */
+.trendingOffer {
+  width: 70%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 30px; /* Adds rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+  margin: -50px auto 0 auto; /* Negative top margin to create overlap */
+  position: relative; /* Ensures the element positions correctly with respect to its container */
+  z-index: 10; /* Optional: ensures the section stays on top of the previous content */
+}
+
+/* Trending header styles */
+.trending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.trending-header h1 {
+  font-size: 24px;
+  color: #222;
+}
+
+.view-all {
+  background: none;
+  border: 1px solid #c1c2c4;
+  color: #1a73e8;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 6px 20px;
+  border-radius: 15px;
+}
+
+/* Offer Cards Container styles */
+.offer-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  padding-bottom: 10px;
+}
+
+/* Individual Card styles */
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 100px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+/* Card background gradients */
+.card:nth-child(1) {
+  background: linear-gradient(135deg, #005bdb, #00a4f1); /* Blue gradient */
+}
+
+.card:nth-child(2){
+  background: linear-gradient(135deg, #007f72, #2cc1a2); /* Green gradient */
+}
+
+.card:nth-child(3)  {
+  background: linear-gradient(135deg, #b00020, #ff5c5c); /* Red gradient */
+}
+
+/* Card Content styles */
+.card-content {
+  padding: 10px;
+}
+
+.tag-button {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.offer-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.validity {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.coupon-button {
+  background: none;
+  border: 1px dashed #fff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.coupon-button::after {
+  content: '📋'; /* Clipboard icon */
+  margin-left: 5px;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .trending-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .view-all {
+    margin-top: 10px;
+  }
+
+  .offer-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  .card {
+    min-width: 100%; /* Ensure cards take full width on smaller screens */
+    padding: 15px;
+  }
+
+  .offer-title {
+    font-size: 14px;
+  }
+
+  .validity,
+  .coupon-button {
+    font-size: 12px;
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 576px) {
+  .trending-header h1 {
+    font-size: 20px;
+  }
+
+  .view-all {
+    font-size: 16px;
+    padding: 5px 15px;
+  }
+
+  .offer-cards {
+    display: flex;
+    flex-direction: column; /* Stacking cards on top of each other */
+    gap: 10px;
+  }
+
+  .card {
+    min-width: 100%; /* Full width for mobile */
+    padding: 10px;
+  }
+
+  .card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .offer-title {
+    font-size: 13px;
+  }
+
+  .validity,
+  .coupon-button {
+    font-size: 10px;
+  }
+}
+
+/* Third section styles */
+.third_section {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff;
+  margin: 40px auto; /* 40px top and bottom margin */
+}
+
+.contents {
+  max-width: 50%;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.train-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Train Logo Styling */
+.train-logo {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Train Title Styling */
+.train-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+/* Description Text Styling */
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Feature Item Styling */
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Icon Styling for Features */
+.icon {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Feature Text Styling */
+.feature-text {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Button Container Styling */
+.button-container {
+  margin-top: 30px;
+}
+
+/* Book Button Styling */
+.book-button {
+  background-color: #d32f2f;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Book Button Hover Effect */
+.book-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Train Image Container Styling */
+.train-image {
+  max-width: 45%;
+}
+
+/* Train Image Styling */
+.train-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet Responsive Styles */
+@media (max-width: 1024px) {
+  /* Adjust third section width and padding */
+  .third_section {
+    width: 80%;
+    padding: 30px;
+  }
+
+  /* Reduce heading font size */
+  .heading {
+    font-size: 2rem;
+  }
+
+  /* Adjust train title font size */
+  .train-info .train-title {
+    font-size: 1.4rem;
+  }
+
+  /* Reduce description font size */
+  .description {
+    font-size: 1rem;
+  }
+
+  /* Adjust feature text font size */
+  .feature-text {
+    font-size: 1.1rem;
+  }
+
+  /* Adjust book button size and padding */
+  .book-button {
+    font-size: 1rem;
+    padding: 8px 18px;
+  }
+
+  /* Reduce train image width */
+  .train-image img {
+    max-width: 90%;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  /* Stack content vertically */
+  .third_section {
+    flex-direction: column;
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Adjust content width */
+  .contents {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Adjust train image width */
+  .train-image {
+    max-width: 100%;
+  }
+
+  /* Reduce heading font size */
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  /* Center align train info */
+  .train-info {
+    justify-content: center;
+  }
+
+  /* Adjust train title font size */
+  .train-info .train-title {
+    font-size: 1.2rem;
+  }
+
+  /* Reduce description font size */
+  .description {
+    font-size: 1rem;
+  }
+
+  /* Center align features */
+  .feature {
+    justify-content: center;
+  }
+
+  /* Adjust feature text font size */
+  .feature-text {
+    font-size: 1rem;
+  }
+
+  /* Adjust book button size and width */
+  .book-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* Adjust train image size */
+  .train-image img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra Small Mobile Responsive Styles */
+@media (max-width: 480px) {
+  /* Adjust section padding */
+  .third_section {
+    padding: 15px;
+  }
+
+  /* Further reduce heading font size */
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  /* Reduce description font size */
+  .description {
+    font-size: 0.9rem;
+  }
+
+  /* Reduce feature text font size */
+  .feature-text {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust book button size and padding */
+  .book-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  /* Ensure train image fits screen */
+  .train-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Product Banner Styling */
+.productBanner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Product Container Styling */
+.productBanner .product {
+  width: 80%;
+  margin: 40px auto;
+}
+
+/* Product Image Styling */
+.productBanner .product img {
+  width: 100%;
+}
+
+/* Flag Section Header Styling */
+.flag .head {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* Flag Section Heading Styling */
+.flag .head h1 {
+  font-size: 50px;
+  font-weight: 200;
+}
+
+/* Global Presence Section Styling */
+.global-presence {
+  font-family: Arial, sans-serif;
+  margin: 60px 0;
+}
+
+/* Flags Container Styling */
+.flags-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+
+/* Individual Flag Item Styling */
+.flag-item {
+  text-align: center;
+}
+
+/* Flag Image Styling */
+.flag-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Flag Label Styling */
+.flag-item p {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Tablet Responsive Styles for Flags */
+@media (max-width: 1024px) {
+  /* Adjust flag section heading */
+  .flag .head h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  /* Reduce gap between flags */
+  .flags-container {
+    gap: 30px;
+  }
+
+  /* Adjust flag image size */
+  .flag-item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Reduce flag label font size */
+  .flag-item p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Responsive Styles for Flags */
+@media (max-width: 768px) {
+  /* Adjust flag section width */
+  .flag .head {
+    width: 90%;
+  }
+
+  /* Further reduce flag section heading */
+  .flag .head h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  /* Further reduce gap between flags */
+  .flags-container {
+    gap: 20px;
+  }
+
+  /* Adjust flag item size */
+  .flag-item {
+    flex: 1 1 120px;
+    max-width: 120px;
+  }
+
+  /* Further reduce flag image size */
+  .flag-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  /* Further reduce flag label font size */
+  .flag-item p {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Mobile Responsive Styles for Flags */
+@media (max-width: 480px) {
+  /* Further reduce flag section heading */
+  .flag .head h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  /* Reduce gap between flags */
+  .flags-container {
+    gap: 15px;
+  }
+
+  /* Adjust flag item size */
+  .flag-item {
+    flex: 1 1 90px;
+    max-width: 90px;
+  }
+
+  /* Further reduce flag image size */
+  .flag-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Further reduce flag label font size */
+  .flag-item p {
+    font-size: 11px;
+  }
+}
+
+/* About Section Styling */
+.about {
+  width: 70%;
+  padding: 50px 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 50px auto;
+}
+
+/* About Section Heading Styling */
+.about-head h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* About Section Paragraph Styling */
+.about-para {
+  line-height: 1.8;
+  font-size: 18px;
+  text-align: left;
+  color: #555;
+}
+
+/* Individual Paragraph Styling */
+.about-para p {
+  margin-bottom: 20px;
+}
+
+/* Link Styling in About Section */
+.about-para p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Link Hover Effect in About Section */
+.about-para p a:hover {
+  text-decoration: underline;
+}
+
+/* Book Now Section Styling */
+.BookNow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+/* Book Now Container Styling */
+.container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: white;
+}
+
+/* Logo Styling in Book Now Section */
+.logo img {
+  max-width: 60px;
+  margin-right: 20px;
+}
+
+/* Deal Section Styling */
+.Unlock {
+  flex-grow: 1;
+  padding-right: 20px;
+}
+
+/* Deal Heading Styling */
+.Unlock h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Discount Text Styling */
+.Unlock .discount {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Deal Description Styling */
+.Unlock p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Highlighted Text in Deal Description */
+.Unlock p span {
+  font-weight: bold;
+  color: #e63946;
+  margin-right: 10px;
+}
+
+/* Book Now Button Container */
+.booknow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Book Now Button Styling */
+.book-btn {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Book Now Button Hover Effect */
+.book-btn:hover {
+  background-color: #c53030;
+}
+
+/* Tablet Responsive Styles for Book Now Section */
+@media (max-width: 1024px) {
+  /* Stack elements vertically */
+  .BookNow .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Adjust logo size and spacing */
+  .logo img {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+
+  /* Increase deal heading font size */
+  .Unlock h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Adjust deal description font size */
+  .Unlock p {
+    font-size: 1rem;
+  }
+
+  /* Adjust book now button size and spacing */
+  .book-btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Responsive Styles for Book Now Section */
+@media (max-width: 768px) {
+  /* Adjust container padding */
+  .BookNow .container {
+    padding: 20px 10px;
+  }
+
+  /* Further adjust logo size */
+  .logo img {
+    width: 90px;
+    margin-bottom: 15px;
+  }
+
+  /* Adjust deal heading font size */
+  .Unlock h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  /* Reduce deal description font size */
+  .Unlock p {
+    font-size: 0.9rem;
+  }
+
+  /* Adjust book now button size */
+  .book-btn {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile Responsive Styles for Book Now Section */
+@media (max-width: 480px) {
+  /* Further adjust container padding */
+  .BookNow .container {
+    padding: 15px 5px;
+  }
+
+  /* Further reduce logo size */
+  .logo img {
+    width: 70px;
+  }
+
+  /* Further reduce deal heading font size */
+  .Unlock h1 {
+    font-size: 1.3rem;
+  }
+
+  /* Further reduce deal description font size */
+  .Unlock p {
+    font-size: 0.8rem;
+  }
+
+  /* Further adjust book now button size */
+  .book-btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #f2f2f2;
+  padding: 100px 0 50px 0;
+  text-align: left;
+}
+
+/* First Footer Section Styling */
+.footer-section.first {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Div in First Footer Section */
+.footer-section.first div {
+  flex: 1;
+  padding: 0 10px;
+}
+
+/* Footer Logo Styling */
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* Footer Description Styling */
+.footer-description p {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Footer Links Styling */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Footer Link Item Styling */
+.footer-links ul li {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+}
+/* Footer Links Styling (continued) */
+.footer-links ul li {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+/* Footer Links Heading Styling */
+.footer-links .heading {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Footer Link Anchor Styling */
+.footer-links ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Footer Link Anchor Hover Effect */
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Second Footer Section Styling */
+.footer-section.second {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Footer Copyright Text Styling */
+.footer-copyright {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Footer Social Icons Styling */
+.footer-social .social-icons i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #333;
+}
+
+/* Footer Social Icons Hover Effect */
+.footer-social .social-icons i:hover {
+  color: #007bff;
+}
+
+/* Tablet Responsive Styles for Footer */
+@media (max-width: 1024px) {
+  /* Adjust first footer section layout */
+  .footer-section.first {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Adjust individual div in first footer section */
+  .footer-section.first div {
+    flex: 1 1 50%;
+    min-width: 220px;
+    margin-bottom: 20px;
+  }
+
+  /* Reduce footer logo size */
+  .footer-logo img {
+    width: 100px;
+  }
+
+  /* Reduce footer description font size */
+  .footer-description p {
+    font-size: 13px;
+  }
+
+  /* Reduce footer links font size */
+  .footer-links ul li {
+    font-size: 13px;
+  }
+
+  /* Adjust second footer section layout */
+  .footer-section.second {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Add margin to footer social icons */
+  .footer-social {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Responsive Styles for Footer */
+@media (max-width: 768px) {
+  /* Adjust footer padding */
+  footer {
+    padding: 50px 20px;
+  }
+
+  /* Stack first footer section vertically */
+  .footer-section.first {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust individual div in first footer section */
+  .footer-section.first div {
+    flex: 1;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure full width on mobile */
+  }
+
+  /* Further reduce footer logo size */
+  .footer-logo img {
+    width: 80px;
+  }
+
+  /* Adjust footer description text */
+  .footer-description p {
+    font-size: 12px;
+    text-align: center; /* Center text for better readability */
+  }
+
+  /* Reduce footer links font size */
+  .footer-links ul li {
+    font-size: 12px;
+  }
+
+  /* Adjust second footer section layout */
+  .footer-section.second {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Reduce footer social icons size and spacing */
+  .footer-social .social-icons i {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+}
+
+/* Extra Small Mobile Responsive Styles for Footer */
+@media (max-width: 480px) {
+  /* Further adjust footer padding */
+  footer {
+    padding: 30px 10px;
+  }
+
+  /* Maintain vertical stack for first footer section */
+  .footer-section.first {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Further reduce footer logo size */
+  .footer-logo img {
+    width: 70px;
+  }
+
+  /* Further reduce footer description font size */
+  .footer-description p {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  /* Further reduce footer links font size */
+  .footer-links ul li {
+    font-size: 11px;
+  }
+
+  /* Add margin to footer links section */
+  .footer-links {
+    margin-bottom: 15px;
+  }
+
+  /* Maintain vertical layout for second footer section */
+  .footer-section.second {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Further reduce footer social icons size and spacing */
+  .footer-social .social-icons i {
+    font-size: 16px;
+    margin-right: 5px;
+  }
+}

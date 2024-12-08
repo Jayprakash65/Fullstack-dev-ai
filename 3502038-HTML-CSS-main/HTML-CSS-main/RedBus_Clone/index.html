@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedBus Clone</title>
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome CSS for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav>
+      <!-- Left section of the navbar -->
+      <div class="left">
+        <div class="nav-left">
+          <!-- RedBus logo -->
+          <img src="assets/redlogo.png" alt="RedBus Logo" class="logo" />
+        </div>
+        <div class="nav-center">
+          <!-- Bus Tickets nav item -->
+          <div class="nav-item Busticket">
+            <img src="assets/whitelogo.png" alt="Bus Icon" />
+            <p>Bus Tickets</p>
+          </div>
+          <!-- Train Tickets nav item -->
+          <div class="nav-item">
+            <img src="assets/raillogo.png" alt="Train Icon" />
+            <p>Train Tickets</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right section of the navbar -->
+      <div class="right">
+        <!-- Help nav item -->
+        <div class="nav-item">
+          <img src="assets/headset.png" alt="Help Icon" />
+          <p>Help</p>
+        </div>
+        <!-- Language selection nav item -->
+        <div class="nav-item">
+          <img src="assets/language.png" alt="Language Icon" />
+          <p>English</p>
+        </div>
+        <!-- Account nav item -->
+        <div class="nav-item">
+          <img src="assets/account.png" alt="Account Icon" />
+          <p>Account</p>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content area -->
+    <section class="home">
+      <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
+      <!-- Search section -->
+      <section class="search-section">
+        <div class="search-banner">
+          <div class="search-box">
+            <!-- From input field -->
+            <div class="search-field from">
+              <img src="assets/busicon.png" alt="Bus Icon" />
+              <input type="text" placeholder="From" />
+            </div>
+            <!-- To input field -->
+            <div class="search-field to">
+              <img src="assets/busicon.png" alt="Bus Icon" />
+              <input type="text" placeholder="To" />
+            </div>
+            <!-- Date input field -->
+            <div class="search-field date">
+              <img src="assets/calendericon.png" alt="Calendar Icon" />
+              <input type="date" />
+            </div>
+            <!-- Search button -->
+            <button class="search-button">SEARCH BUSES</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Trending offers section -->
+    <section class="content">
+      <div class="trendingOffer">
+        <div class="trending-header">
+          <h1>TRENDING OFFERS</h1>
+          <button class="view-all">View All</button>
+        </div>
+        <!-- Offer cards container -->
+        <div class="offer-cards">
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="assets/card1.png" alt="Offer 1" />
+            <div class="card-content">
+              <button class="tag-button">BUS</button>
+              <p class="offer-title">Save up to Rs 500 on bus tickets</p>
+              <p class="validity">Valid till 29 Sep</p>
+              <button class="coupon-button">DUSSEHRA</button>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="card">
+            <img src="assets/card2.png" alt="Offer 2" />
+            <div class="card-content">
+              <button class="tag-button">BUS</button>
+              <p class="offer-title">Save up to Rs 250 on bus tickets</p>
+              <p class="validity">Valid till 01 Oct</p>
+              <button class="coupon-button">FIRST</button>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="card">
+            <img src="assets/card3.png" alt="Offer 3" />
+            <div class="card-content">
+              <button class="tag-button">BUS</button>
+              <p class="offer-title">Save up to Rs 300 on Karnataka, Tamil</p>
+              <p class="validity">Valid till 01 Oct</p>
+              <button class="coupon-button">CASH300</button>
+            </div>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Train ticket booking promotion section -->
+    <section class="third_section">
+      <div class="contents">
+        <h1 class="heading">NOW, GET MORE THAN JUST BUS TICKETS WITH REDBUS!</h1>
+        <div class="train-info">
+          <img src="assets/raillogo.png" alt="redRail Logo" class="train-logo">
+          <p class="train-title">Train Tickets</p>
+        </div>
+        <p class="description">Book IRCTC Train Tickets on redRail simple & superfast booking process with no service fee + no payment gateway charge.</p>
+        <!-- Feature highlights -->
+        <div class="feature">
+          <img src="assets/icon1.png" alt="IRCTC Partner" class="icon">
+          <p class="feature-text">Authorised IRCTC Partner</p>
+        </div>
+        <div class="feature">
+          <img src="assets/icon2.png" alt="UPI Refunds" class="icon">
+          <p class="feature-text">Instant refunds on UPI payments</p>
+        </div>
+        <div class="feature">
+          <img src="assets/icon3.png" alt="Customer Support" class="icon">
+          <p class="feature-text">Hassle-free customer support</p>
+        </div>
+        <div class="button-container">
+          <button class="book-button">Book Train Tickets ></button>
+        </div>
+      </div>
+      <div class="train-image">
+        <img src="assets/Train.png" alt="Train Image">
+      </div>
+    </section>
+
+    <!-- Product banner section -->
+    <section class="productBanner">
+      <div class="product"><img src="assets/banner.png" alt=""></div>
+    </section>
+    
+    <!-- Global presence section -->
+    <section class="flag">
+      <div class="head">
+        <h1>Global Presence</h1>
+      </div>
+      <div class="global-presence">
+        <div class="flags-container">
+          <!-- Flag items for each country -->
+          <div class="flag-item">
+            <img src="assets/flag1.png" alt="Colombia Flag">
+            <p>Colombia</p>
+          </div>
+          <div class="flag-item">
+            <img src="assets/flag2.png" alt="India Flag">
+            <p>India</p>
+          </div>
+          <div class="flag-item">
+            <img src="assets/flag3.png" alt="Indonesia Flag">
+            <p>Indonesia</p>
+          </div>
+          <div class="flag-item">
+            <img src="assets/flag5.png" alt="Malaysia Flag">
+            <p>Malaysia</p>
+          </div>
+          <div class="flag-item">
+            <img src="assets/flag6.png" alt="Peru Flag">
+            <p>Peru</p>
+          </div>
+          <div class="flag-item">
+            <img src="assets/flag7.png" alt="Singapore Flag">
+            <p>Singapore</p>
+          </div>
+          <div class="flag-item">
+            <img src="assets/flag8.png" alt="Vietnam Flag">
+            <p>Vietnam</p>
+          </div>
+          <div class="flag-item">
+            <img src="assets/flag9.png" alt="Cambodia Flag">
+            <p>Cambodia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about">
+      <div class="about-head">
+        <h1>BOOK BUS TICKETS ONLINE</h1>
+      </div>
+      <div class="about-para">
+        <p>redBus is India's largest brand for online bus ticket booking and offers an easy-to-use online bus and train ticket booking; with over 36 million satisfied customers, 3500+ bus operators to choose from, and plenty of offers on bus ticket booking, redBus makes road journeys super convenient for travellers. A leading platform for booking bus tickets, redBus has been the leader in online bus booking over the past 17 years across thousands of cities and lakhs of routes in India.</p>
+        <p>Booking a bus ticket online on the redBus app or website is very simple. You can download the redBus app or visit redbus.in and enter your source, destination & travel date to check the top-rated bus services available. You can then compare bus prices, user ratings & amenities, select your preferred seat, boarding & dropping points and pay using multiple payment options like UPI, debit or credit card, net banking and more. With redBus, get assured safe & secure payment methods and guaranteed travel with the best services available.</p>
+      </div>
+    </section>
+
+    <!-- Book Now section -->
+    <section class="BookNow">
+      <div class="container">
+          <div class="logo">
+              <img src="assets/redlogo.png" alt="redBus Logo">
+          </div>
+          <div class="Unlock">
+              <h1>Unlock Unbeatable Exclusive redDeals! <span class="discount"> 20% OFF</span></h1>
+              <p>
+                  <span class="deals">4176</span> Deals 
+                  <span class="bus-operators">1816</span> Bus Operators 
+                  <span class="routes">231930</span> Routes
+              </p>
+          </div>
+          <div class="booknow">
+              <button class="book-btn">Book now</button>
+          </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <!-- First footer section -->
+      <div class="footer-section first">
+        <!-- Footer logo and description -->
+        <div class="footer-logo">
+          <div>
+            <img src="assets/redlogo.png" alt="redBus Logo" />
+          </div>
+          <div class="footer-description">
+            <p>
+              redBus is the world's largest online bus ticket booking service
+              trusted by over 25 million happy customers globally. redBus offers
+              bus ticket booking through its website, iOS, and Android mobile
+              apps for all major routes.
+            </p>
+          </div>
+        </div>
+
+        <!-- About redBus links -->
+        <div class="footer-links about-redbus">
+          <ul>
+            <li class="heading">About redBus</li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Mobile version</a></li>
+            <li><a href="#">redBus on mobile</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Values</a></li>
+          </ul>
+        </div>
+
+        <!-- Info links -->
+        <div class="footer-links info-section">
+          <ul>
+            <li class="heading">Info</li>
+            <li><a href="#">T&C</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">redBus on mobile</a></li>
+            <li><a href="#">Bus Timetable</a></li>
+            <li><a href="#">Primo Bus</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Values</a></li>
+          </ul>
+        </div>
+
+        <!-- Global sites links -->
+        <div class="footer-links global-sites">
+          <ul>
+            <li class="heading">Global Sites</li>
+            <li><a href="#">India</a></li>
+            <li><a href="#">Singapore</a></li>
+            <li><a href="#">Malaysia</a></li>
+            <li><a href="#">Indonesia</a></li>
+            <li><a href="#">Peru</a></li>
+            <li><a href="#">Colombia</a></li>
+            <li><a href="#">Cambodia</a></li>
+            <li><a href="#">Vietnam</a></li>
+          </ul>
+        </div>
+
+        <!-- Partner links -->
+        <div class="footer-links partners">
+          <ul>
+            <li class="heading">Our Partners</li>
+            <li><a href="#">Goibibo Bus</a></li>
+            <li><a href="#">Goibibo Hotels</a></li>
+            <li><a href="#">Makemytrip Hotels</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Second footer section -->
+      <div class="footer-section second">
+        <!-- Copyright information -->
+        <div class="footer-copyright">
+          <p>Ⓒ 2024 Redbus India Pvt Ltd. All rights reserved</p>
+        </div>
+        <!-- Social media icons -->
+        <div class="footer-social">
+          <div class="social-icons">
+            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-youtube-play"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin-square"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

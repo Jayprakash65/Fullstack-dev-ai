@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #f4a261;
+}
+
+/* Parallax Sections */
+.parallax {
+  position: relative;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.parallax1 {
+  background-image: url("https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.parallax2 {
+  background-image: url("https://images.pexels.com/photos/1105389/pexels-photo-1105389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.parallax3 {
+  background-image: url("https://images.pexels.com/photos/1134190/pexels-photo-1134190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(171, 161, 161);
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.overlay p {
+  font-size: 22px;
+  max-width: 600px;
+}
+
+/* Content Section */
+.content {
+  padding: 50px;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.content h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #333;
+}
+
+.content p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Footer Section */
+footer {
+  padding: 30px;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+footer h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer p:last-child {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #aaa;
+}

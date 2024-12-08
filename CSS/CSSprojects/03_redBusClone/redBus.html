@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="redBus.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="flex justify-between sticky top-0 left-0 w-[100%] z-50  py-[10px] px-[20px] bg-white shadow-md shadow-[#0000001a]">
+        <div class="flex gap-28 pl-[100px]">
+            <div class="flex items-center">
+                <img class="w-[70px] h-[50px]" src="assets/redlogo.png" alt="" srcset="">
+            </div>
+
+
+            <div class="flex gap-3">
+                <div class="flex flex-col bg-[#d84e56] rounded-lg px-[10px] py-[10px] items-center">
+                    <img class="w-[40px] h-[24px]" src="assets/whitelogo.png" alt="" srcset="">
+
+                    <p class="">BUS Tickets</p>
+                </div>
+
+                <div class="flex flex-col rounded-lg px-[10px] py-[10px] items-center hover:bg-gray-100">
+                    <img class="w-[30px] h-[24px]"  src="https://s3.rdbuz.com/web/images/layout/rail_vertical.svg" alt="" srcset="">
+                    <p>TRAIN Tickets</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex gap-12 items-center mr-[150px]">
+            <div class="flex gap-1 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                <img class="w-[22px] h-[22.4px]"  src="assets/headset.png" alt="">
+                <p>Help</p>
+            </div>
+
+            <div class="flex gap-1 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                <img class="w-[22px] h-[22.4px]"  src="assets/language.png" alt="">
+                <p>English</p>
+            </div>
+
+            <div class="flex gap-1 hover:bg-gray-100 px-3 py-2 rounded-lg">
+                <img class="w-[22px] h-[22.4px]"  src="assets/account.png" alt="">
+                <p>Account</p>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-[url('assets/HomeBannerNew.png')] b-no-reapeat bg-center bg-cover w-full h-[70vh] flex flex-col items-center text-center pt-[20px] gap-6">
+        <h1 class="text-white text-3xl font-bold py-0 px-[15px] mb-[20px] mt-[30px]">India's No. 1 Online Bus Ticket Booking Site</h1>
+        <section class="flex justify-center items-center bg-red-100 w-full">
+            <div class="absolute top-[250px]">
+                <div class="flex flex-row bg-white  rounded-2xl overflow-hidden items-center  gap-2 h-20">
+                    <div class="flex items-center">
+                        <img class="h-[50px] w-[70px]" src="assets/busicon.png" alt="busicon">
+                        <input class="border-none outline-none w-[150px] " type="text" placeholder="From">
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-[50px] w-[70px]" src="assets/busicon.png" alt="busicon">
+                        <input class="border-none outline-none w-[150px]" type="text" placeholder="To">
+                    </div>
+                    <div class="flex items-center">
+                        <img class="h-[60px] w-[60px]" src="assets/calendericon.png" alt="calendericon">
+                        <input class="border-none outline-none w-[150px]" type="date" placeholder="">
+                    </div>
+
+                    <button class="bg-blue-300 h-full w-[150px] py-[30px] px-[20px] font-medium">Search Buses</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="flex justify-center items-center ">
+            <div class="p-[32px] bg-blue-100 flex flex-col gap-6 mx-[200px] rounded-lg absolute top-[500px] w-[1200px]">
+                <div class="flex justify-between">
+                    <h2>TRENDING OFFERS</h2>
+                    <a class="bg-gray-100 px-4 py-1 rounded-2xl border-2 border-black">View All</a>
+                </div>
+
+                <div class="flex gap-2 overflow-x-auto whitespace-nowrap ">
+                    <div class="flex bg-[rgb(48,100,195)] p-5 gap-1 rounded-lg min-w-[400px]"> 
+                        <div class="flex justify-center items-center">
+                            <img class=" w-32 rounded-full" src="assets/card1.png" alt="">
+                        </div>
+                        <div class="p-2 flex flex-col text-white">
+                            <h2>Bus</h2>
+                            <h2 class="font-bold ">Save upto Rs 250 on bus tickets</h2>
+                            <h2 class="text-[13px] mb-[10px]">Valid till  31 Dec</h2>
+                            <div class="flex gap-6 mt-[5px] items-center ">
+                                <h2 class="items-center outline-dashed px-[11px] rounded-lg">FIRST</h2>
+                                <img class="h-3" src="assets/copy.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="flex bg-[rgb(48,100,195)] p-5 gap-1 rounded-lg ] min-w-[400px]"> 
+                        <div class="flex justify-center items-center">
+                            <img class="h- w-32 rounded-full" src="assets/card2.png" alt="">
+                        </div>
+                        <div class="p-2 flex flex-col text-white">
+                            <h2>Bus</h2>
+                            <h2 class="font-bold ">Save upto Rs 250 on bus tickets</h2>
+                            <h2 class="text-[13px] mb-[10px]">Valid till  31 Dec</h2>
+                            <div class="flex gap-6 mt-[5px] items-center ">
+                                <h2 class="items-center outline-dashed px-[11px] rounded-lg">FIRST</h2>
+                                <img class="h-3" src="assets/copy.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="flex bg-[rgb(48,100,195)] p-5 gap-1 rounded-lg min-w-[400px]"> 
+                        <div class="flex justify-center items-center">
+                            <img class="h- w-32 rounded-full" src="assets/card3.png" alt="">
+                        </div>
+                        <div class="p-2 flex flex-col text-white">
+                            <h2>Bus</h2>
+                            <h2 class="font-bold ">Save upto Rs 250 on bus tickets</h2>
+                            <h2 class="text-[13px] mb-[10px]">Valid till  31 Dec</h2>
+                            <div class="flex gap-6 mt-[5px] items-center ">
+                                <h2 class="items-center outline-dashed px-[11px] rounded-lg">FIRST</h2>
+                                <img class="h-3" src="assets/copy.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="flex bg-[rgb(48,100,195)] p-5 gap-1 rounded-lg min-w-[400px]"> 
+                        <div class="flex justify-center items-center">
+                            <img class="h- w-32 rounded-full" src="assets/card1.png" alt="">
+                        </div>
+                        <div class="p-2 flex flex-col text-white">
+                            <h2>Bus</h2>
+                            <h2 class="font-bold ">Save upto Rs 250 on bus tickets</h2>
+                            <h2 class="text-[13px] mb-[10px]">Valid till  31 Dec</h2>
+                            <div class="flex gap-6 mt-[5px] items-center ">
+                                <h2 class="items-center outline-dashed px-[11px] rounded-lg">FIRST</h2>
+                                <img class="h-3" src="assets/copy.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="flex bg-[rgb(48,100,195)] p-5 gap-1 rounded-lg min-w-[400px]"> 
+                        <div class="flex justify-center items-center">
+                            <img class="h- w-32 rounded-full" src="assets/card1.png" alt="">
+                        </div>
+                        <div class="p-2 flex flex-col text-white">
+                            <h2>Bus</h2>
+                            <h2 class="font-bold ">Save upto Rs 250 on bus tickets</h2>
+                            <h2 class="text-[13px] mb-[10px]">Valid till  31 Dec</h2>
+                            <div class="flex gap-6 mt-[5px] items-center ">
+                                <h2 class="items-center outline-dashed px-[11px] rounded-lg">FIRST</h2>
+                                <img class="h-3" src="assets/copy.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="flex bg-[rgb(48,100,195)] p-5 gap-1 rounded-lg min-w-[400px]"> 
+                        <div class="flex justify-center items-center">
+                            <img class="h- w-32 rounded-full" src="assets/card1.png" alt="">
+                        </div>
+                        <div class="p-2 flex flex-col text-white">
+                            <h2>Bus</h2>
+                            <h2 class="font-bold ">Save upto Rs 250 on bus tickets</h2>
+                            <h2 class="text-[13px] mb-[10px]">Valid till  31 Dec</h2>
+                            <div class="flex gap-6 mt-[5px] items-center ">
+                                <h2 class="items-center outline-dashed px-[11px] rounded-lg">FIRST</h2>
+                                <img class="h-3" src="assets/copy.png" alt="" srcset="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        
+    </section>
+    
+
+
+
+
+</body>
+</html>

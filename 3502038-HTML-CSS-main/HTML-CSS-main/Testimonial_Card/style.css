@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+/* Reset margin and padding for all elements and set box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* Set default font */
+}
+
+/* Body styling to center content and set background */
+body {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap */
+  min-height: 100vh; /* Full viewport height */
+  background: #1e2a38; /* Dark blue-gray background */
+}
+
+/* Main container styling */
+body .container {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow items to wrap */
+  max-width: 1200px; /* Set maximum width for the container */
+  margin: 40px 0; /* Add vertical margin */
+}
+
+/* Individual card styling */
+body .container .card {
+  position: relative; /* Position for child elements */
+  min-width: 320px; /* Minimum width for the card */
+  height: 440px; /* Fixed height for the card */
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); /* Complex shadow effect */
+  border-radius: 15px; /* Rounded corners */
+  margin: 30px; /* Space around each card */
+  transition: 0.5s; /* Smooth transition for hover effects */
+}
+
+/* Button styling based on card position */
+body .container .card:nth-child(1) .box .content a {
+  background: #00bcd4; /* Light blue for the first card */
+}
+
+body .container .card:nth-child(2) .box .content a {
+  background: #ff9800; /* Orange for the second card */
+}
+
+body .container .card:nth-child(3) .box .content a {
+  background: #4caf50; /* Green for the third card */
+}
+
+/* Inner box of each card */
+body .container .card .box {
+  position: absolute; /* Absolute position for layering */
+  top: 20px; /* Offset from the top */
+  left: 20px; /* Offset from the left */
+  right: 20px; /* Offset from the right */
+  bottom: 20px; /* Offset from the bottom */
+  background: #2c3e50; /* Dark blue-gray background for card box */
+  border-radius: 15px; /* Rounded corners for the inner box */
+  display: flex; /* Use flexbox for centering content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  overflow: hidden; /* Hide overflowed content */
+  transition: 0.5s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the card box */
+body .container .card .box:hover {
+  transform: translateY(-50px); /* Lift effect on hover */
+}
+
+/* Light effect overlay on the card box */
+body .container .card .box:before {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute position for overlay */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 50%; /* Half width overlay */
+  height: 100%; /* Full height overlay */
+  background: rgba(255, 255, 255, 0.05); /* Light overlay effect */
+}
+
+/* Content inside the card box */
+body .container .card .box .content {
+  padding: 20px; /* Inner padding for content */
+  text-align: center; /* Center align text */
+}
+
+/* Styling for the user image */
+body .container .card .box .content .user-image {
+  width: 80px; /* Fixed width for the image */
+  height: 80px; /* Fixed height for the image */
+  border-radius: 50%; /* Circular image */
+  border: 3px solid #fff; /* White border around the image */
+  object-fit: cover; /* Cover to maintain aspect ratio */
+  margin-bottom: 15px; /* Space below the image */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transition: transform 0.3s; /* Smooth scaling transition */
+}
+
+/* Hover effect for the user image */
+body .container .card .box .content .user-image:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Large number in the background of the card */
+body .container .card .box .content h2 {
+  position: absolute; /* Absolute position for layering */
+  top: -10px; /* Align to the top */
+  right: 30px; /* Align to the right */
+  font-size: 8rem; /* Large font size for number */
+  color: rgba(255, 255, 255, 0.1); /* Light color for background number */
+}
+
+/* Card title styling */
+body .container .card .box .content h3 {
+  font-size: 1.8rem; /* Font size for title */
+  color: #e3f2fd; /* Light blue color for title text */
+  z-index: 1; /* Stack above background elements */
+  transition: 0.5s; /* Smooth transition for hover effects */
+  margin-bottom: 15px; /* Space below title */
+}
+
+/* Card description text */
+body .container .card .box .content p {
+  font-size: 1rem; /* Font size for description */
+  font-weight: 300; /* Light font weight for text */
+  color: #d1d1d1; /* Soft gray color for text */
+  z-index: 1; /* Stack above background elements */
+  transition: 0.5s; /* Smooth transition for hover effects */
+}
+
+/* Button styling inside the card */
+body .container .card .box .content a {
+  position: relative; /* Relative position for layering */
+  display: inline-block; /* Inline block for button styling */
+  padding: 8px 20px; /* Padding around the button text */
+  background: #34495e; /* Dark gray-blue button background */
+  border-radius: 5px; /* Rounded corners for button */
+  text-decoration: none; /* Remove underline from link */
+  color: white; /* White text color */
+  margin-top: 20px; /* Space above button */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect for button */
+  transition: 0.5s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the buttons */
+body .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Darker shadow on hover */
+  background: #ecf0f1; /* Light gray background on hover */
+  color: #34495e; /* Dark text color on hover */
+}

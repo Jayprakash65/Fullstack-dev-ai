@@ -1,0 +1,373 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+  }
+  
+  /* Top section of the navbar */
+  .navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px 20px 40px;
+  }
+  
+  /* Logo and brand name */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .navbar-logo p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Right-side items (privacy, search, icons) */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right p {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  /* Search bar styling */
+  .navbar-search {
+    position: relative;
+  }
+  
+  .navbar-search input[type="search"] {
+    padding: 15px 20px;
+    border-radius: 3px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    margin-right: 10px;
+    outline: none;
+  }
+  
+  .navbar-search .fa-search {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    margin: 0 10px 10px 0px;
+  }
+  
+  /* Icons for favorites and user */
+  .navbar-icon {
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  /* Divider line */
+  .navbar-divider {
+    border-color: #444;
+    margin: 10px 0;
+  }
+  
+  /* Bottom section with links */
+  .navbar-bottom {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
+    margin: 0 80px 0 80px;
+  }
+  
+  .navbar-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links p {
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .navbar-links .fa-car {
+    margin-right: 10px;
+    font-size: 18px;
+  }
+  
+  .hero {
+    position: relative;
+    height: 70vh;
+    background-image: url("assets/Hero.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    place-content: center;
+    padding-left: 100px;
+  }
+  
+  /* Heading style */
+  .hero h1 {
+    font-size: 5rem;
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7); /* Shadow effect */
+  }
+  
+  /* Button container */
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Button styles */
+  .btn {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Outline button */
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  .btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Primary button */
+  .btn-primary {
+    background-color: #0000; /* Mercedes-Benz blue button */
+    color: #fff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0000;
+  }
+  
+  .recommendation{
+    padding: 60px;
+  }
+  .recommendation h1{
+    font-size: 40px;
+  }
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 70vh 80vh; /* Set the height of the first and second row */
+    gap: 16px;
+    padding: 20px;
+    
+  }
+  
+  .recommendation-box {
+    position: relative;
+    text-align: left;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%; /* Use 100% to fill the grid row height */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.7) 100%); /* Gradient overlay */
+    
+  }
+  /* Hover effect for recommendation box */
+.recommendation-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* On hover, slightly scale up the recommendation box and add a deeper shadow */
+  .recommendation-box:hover {
+    transform: scale(1.05); /* Slightly enlarges the box */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow for a pop-out effect */
+  }
+  
+  
+  .recommendation-box h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .recommendation-box button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: 15rem;
+   
+  }
+  
+  .recommendation-box button:hover {
+    background-color: #000;
+  }
+  
+  /* Background Images for each div */
+  .div1 {
+    grid-column: span 2;
+    background-image: url('assets/image1.png');
+  }
+  
+  .div2 {
+    background-image: url('assets/image2.png');
+  }
+  
+  .div3 {
+    background-image: url('assets/image3.png');
+  }
+  
+  .div4 {
+    background-image: url('assets/image4.png');
+  }
+  
+  .div6 {
+    background-image: url('assets/image5.png');
+  }
+  
+ 
+  
+  /* Basic Reset */
+  body, h1, button, img {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  /* Card Styling */
+  .card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header Styling */
+  .card-header h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .card-buttons {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+   
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #000;
+  }
+  
+  /* Image Styling */
+  .card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    text-align: left;
+    margin: 60px;
+  }
+  
+  .footer-column p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .footer-heading {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  hr {
+    border: 1px solid #444;
+    margin: 40px 0;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin: 60px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  
+  .footer-bottom .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-bottom .social-icons i {
+    font-size: 20px;
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-bottom .social-icons i:hover {
+    color: #fff;
+  }
+  
