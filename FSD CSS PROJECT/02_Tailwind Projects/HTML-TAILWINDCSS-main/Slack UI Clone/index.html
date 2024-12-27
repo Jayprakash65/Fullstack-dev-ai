@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slack Homepage</title>
+    <!-- adding the tailwind css cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- for custom curve on bottom -->
+    <style>
+        .custom-curve {
+            border-radius: 0 0 50% 50% / 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- for main section -->
+    <main class="bg-[#541554] text-white py-4 space-y-4">
+        <!-- for navigation menu -->
+        <nav class="flex items-center justify-between px-12">
+            <!-- logo and menu section -->
+            <div class="flex items-center gap-8">
+                <!-- logo -->
+                <img class="w-28" src="./images/logo.png" alt="logo" />
+
+                <!-- menu list -->
+                <ul class="flex items-center gap-5 font-bold text-[0.9rem]">
+                    <li>
+                        <a class="flex items-center gap-1" href="#">Features
+                            <div class="pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
+                                    stroke="currentColor" class="w-3 h-3">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center gap-1" href="#">Solutions
+                            <div class="pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
+                                    stroke="currentColor" class="w-3 h-3">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center gap-1" href="#">Enterpise </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center gap-1" href="#">Resources
+                            <div class="pt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4"
+                                    stroke="currentColor" class="w-3 h-3">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center gap-1" href="#">Pricing </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- option buttions (right section) -->
+            <div class="flex items-center gap-10">
+                <!-- for search and sign in -->
+                <div class="flex items-center gap-5 text-[0.9rem] font-bold">
+                    <div class="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </div>
+                    <button>Sign in</button>
+                </div>
+
+                <!-- for both buttons -->
+                <div class="flex items-center gap-5">
+                    <button class="border-[1.5px] border-white rounded-md py-3 px-5 font-bold text-[0.95rem]">
+                        TALK TO SALES
+                    </button>
+                    <button
+                        class="border-[1.5px] border-white bg-white text-[#541554] rounded-md py-3 px-4 font-bold text-[0.95rem]">
+                        TRY FOR FREE
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- for notification -->
+        <div class="bg-[#1264A3] rounded-full mx-5 flex items-center justify-between px-8 py-3">
+            <!-- for text -->
+            <div class="text-lg">
+                <h3 class="font-bold">Dreamforce 2023 is almost here!</h3>
+                <p class="font-semibold flex items-center gap-2">
+                    Reserve your spot to witness the future of AI.
+                    <a href="#" class="underline font-bold">Register now</a>
+                    <img class="w-[0.85rem]"
+                        src="https://a.slack-edge.com/3099b/marketing/img/icons/icon_workspace_arrow_white_nav.svg"
+                        alt="right arrow" />
+                </p>
+            </div>
+
+            <!-- for close button -->
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
+                    stroke="currentColor" class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- main section -->
+        <section class="pl-12 flex items-center gap-5 pb-20">
+            <!-- for main left section -->
+            <div class="w-[55%] space-y-5 self-start">
+                <h1 class="text-6xl font-bold leading-[70px]">
+                    Made for people. <br /><span class="text-[#ECB22E]">Built for productivity.</span>
+                </h1>
+                <p class="text-xl w-[80%]">
+                    Connect the right people, find anything that you need and automate
+                    the rest. That’s work in Slack, your productivity platform.
+                </p>
+                <!-- for buttons -->
+                <div class="flex items-center gap-3 pt-5">
+                    <button
+                        class="border-[1.5px] border-white bg-white text-[#541554] w-auto rounded-sm py-3 px-10 font-bold text-[0.95rem]">
+                        SIGN UP WITH EMAIL ADDRESS
+                    </button>
+                    <button
+                        class="border-[1.5px] border-[#4285F4] bg-[#4285F4] text-[#541554] rounded-sm font-bold text-[0.95rem] flex items-center gap-3 pr-3 h-12">
+                        <div class="bg-white h-[85%] mx-[0.18rem] w-10 flex items-center justify-center rounded-sm">
+                            <img class="w-6" src="./images/googleLogo.png" alt="google logo" />
+                        </div>
+                        <p class="text-white">SIGN UP WITH GOOGLE</p>
+                    </button>
+                </div>
+                <p class="text-lg font-semibold">
+                    <span class="font-bold">Slack is free to try</span> for as long as
+                    you like
+                </p>
+            </div>
+
+            <!-- for main right section -->
+            <div class="w-[45%] h-full">
+                <video autoplay loop muted
+                    src="https://a.slack-edge.com/9436a9f/marketing/img/homepage/e2e-prospects/animations/webm/hero-product-ui.en-IN.webm"
+                    class="h-96 w-full object-cover"></video>
+            </div>
+        </section>
+    </main>
+
+    <!-- for trusted companies -->
+    <section class="flex flex-col items-center gap-5 bg-[#F4EDE4] py-10">
+        <p class="font-semibold text-md">
+            TRUSTED BY COMPANIES ALL OVER THE WORLD
+        </p>
+        <!-- for all companies logo -->
+        <div class="flex items-center gap-10">
+            <img class="h-10" src="https://a.slack-edge.com/ce51938/marketing/img/logos/company/_color/logo-seek@2x.png"
+                alt="seek" />
+            <img class="h-10" src="https://a.slack-edge.com/ce51938/marketing/img/logos/company/_color/logo-xero@2x.png"
+                alt="xero" />
+            <img class="h-10" src="https://a.slack-edge.com/96f2e65/marketing/img/logos/company/_color/rea@2x.png"
+                alt="rea group" />
+            <img class="h-10" src="https://a.slack-edge.com/f854ec/marketing/img/logos/company/_color/rmit@2x.png"
+                alt="rmit university" />
+            <img class="h-10" src="https://a.slack-edge.com/a121d33/marketing/img/digital-hq/logo-ibm@2x.png"
+                alt="ibm" />
+            <img class="h-10" src="https://a.slack-edge.com/f854ec/marketing/img/logos/company/_color/deliveroo@2x.png"
+                alt="deliveroo" />
+        </div>
+    </section>
+
+    <!-- for team together section -->
+    <section class="flex items-center justify-between gap-32 bg-[#F4EDE4] py-10">
+        <video loop muted autoplay
+            src="https://a.slack-edge.com/445abcc/marketing/img/homepage/e2e-prospects/animations/mp4/connectedness.IN.mp4"
+            class="w-[45%]"></video>
+        <div class="flex flex-col gap-5 pr-14">
+            <h1 class="text-5xl font-bold">Bring your team together</h1>
+            <p class="font-semibold leading-6 text-lg">
+                At the heart of Slack are channels: organised spaces for everyone and
+                everything that you need for work. In channels, it’s easier to connect
+                across departments, offices, time zones and even other companies.
+            </p>
+            <a href="#" class="text-lg text-[#1264A3] flex items-center gap-2 font-semibold hover:underline">Learn more
+                about channels
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- for how to work section -->
+    <section class="flex items-center justify-between gap-32 bg-[#F4EDE4] py-10">
+        <div class="flex flex-col gap-5 pl-14">
+            <h1 class="text-5xl font-bold">Choose how you want to work</h1>
+            <p class="font-semibold leading-6 text-lg">
+                In Slack, you’ve got all the flexibility to work when, where and how
+                it’s best for you. You can easily chat, send audio and video clips, or
+                join a huddle to talk things through live.
+            </p>
+            <a href="#" class="text-lg text-[#1264A3] flex items-center gap-2 font-semibold hover:underline">Learn more
+                about flexible communication
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+        <video loop muted autoplay
+            src="https://a.slack-edge.com/445abcc/marketing/img/homepage/e2e-prospects/animations/mp4/flexibility.IN.mp4"
+            class="w-[45%]"></video>
+    </section>
+
+    <!-- for tools section -->
+    <section class="flex items-center justify-between gap-32 bg-[#F4EDE4] py-10">
+        <video loop muted autoplay
+            src="https://a.slack-edge.com/445abcc/marketing/img/homepage/e2e-prospects/animations/mp4/speed.IN.mp4"
+            class="w-[45%]"></video>
+        <div class="flex flex-col gap-5 pr-14">
+            <h1 class="text-5xl font-bold">
+                Move faster with your tools in one place
+            </h1>
+            <p class="font-semibold leading-6 text-lg">
+                With your other work apps connected to Slack, you can work faster by
+                switching tabs less. And with powerful tools like Workflow Builder,
+                you can automate away routine tasks.
+            </p>
+            <a href="#" class="text-lg text-[#1264A3] flex items-center gap-2 font-semibold hover:underline">Learn more
+                about the Slack platform
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- for slack and team stats details -->
+    <section>
+        <div class="flex flex-col items-center gap-5 relative pt-28">
+            <h1 class="text-5xl font-bold">Teams large and small rely on Slack</h1>
+            <p class="text-lg font-medium">
+                Slack securely scales up to support collaboration at the world’s
+                biggest companies.
+            </p>
+            <div class="space-x-1">
+                <button
+                    class="border-[1.5px] border-[#541554] bg-[#541554] text-white rounded-md py-3 px-8 font-bold text-[0.95rem]">
+                    MEET SLACK FOR ENTERPRISE
+                </button>
+                <button
+                    class="border-[1.5px] border-[#541554] bg-white text-[#541554] rounded-md py-3 px-8 font-bold text-[0.95rem]">
+                    TALK TO SALES
+                </button>
+            </div>
+
+            <!-- for small icons -->
+            <div class="absolute top-10 left-36">
+                <img class="w-24"
+                    src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-office-building@2x.png"
+                    alt="building" />
+            </div>
+            <div class="absolute top-10 right-28">
+                <img class="w-20"
+                    src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-skyline@2x.png"
+                    alt="marketing" />
+            </div>
+            <div class="absolute top-[50%] left-20">
+                <img class="w-20"
+                    src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-chart-upward-trend@2x.png"
+                    alt="stats" />
+            </div>
+            <div class="absolute top-[50%] right-36">
+                <img class="w-20"
+                    src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-handshake@2x.png"
+                    alt="hand" />
+            </div>
+            <div class="absolute bottom-0 left-40">
+                <img class="w-20"
+                    src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-lock@2x.png"
+                    alt="lock" />
+            </div>
+            <div class="absolute bottom-0 right-20">
+                <img class="w-24"
+                    src="https://a.slack-edge.com/7460822/marketing/img/homepage/e2e-prospects/emoji/emoji-woman-technologist@2x.png"
+                    alt="girl" />
+            </div>
+        </div>
+
+        <!-- for stats -->
+        <div class="flex items-center justify-evenly my-24">
+            <div class="w-44 space-y-3">
+                <h2 class="text-6xl font-bold text-[#541554]">85%</h2>
+                <p class="font-semibold text-sm">
+                    of users say that Slack has improved communication*
+                </p>
+            </div>
+            <div class="w-44 space-y-3">
+                <h2 class="text-6xl font-bold text-[#541554]">86%</h2>
+                <p class="font-semibold text-sm">
+                    feel that their ability to work remotely has improved*
+                </p>
+            </div>
+            <div class="w-44 space-y-3">
+                <h2 class="text-6xl font-bold text-[#541554]">88%</h2>
+                <p class="font-semibold text-sm">
+                    feel more connected to their teams*
+                </p>
+            </div>
+        </div>
+
+        <!-- for testimonial video -->
+        <section class="flex items-center gap-10">
+            <video autoplay loop muted
+                src="https://a.slack-edge.com/1b4e2a3/marketing/img/homepage/true-prospects/customer-showcase/Vodafone_08.mp4"
+                class="w-[45%] rounded-tr-full rounded-br-full"></video>
+
+            <div class="flex flex-col gap-5 pr-10">
+                <h1 class="text-3xl italic">
+                    ‘Many technology employees were gravitating naturally to Slack. So
+                    we followed our users to what has become one of our most important
+                    tools.’
+                </h1>
+                <div>
+                    <h4 class="font-bold">Matt Beal</h4>
+                    <p class="font-semibold">
+                        Director of Technology Strategy and Architecture, Vodafone
+                    </p>
+                </div>
+                <a href="#" class="text-lg text-[#1264A3] flex items-center gap-2 font-semibold hover:underline">
+                    See more customer stories
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- note for data justification -->
+        <p class="mt-20 text-center text-sm text-gray-600 font-medium mb-5">
+            * Weighted average. Based on 2,707 survey responses from weekly Slack
+            users in the US, UK, Australia and Canada with a ± 2% margin of error at
+            95% CI (December 2021).
+        </p>
+    </section>
+
+    <!-- for displaying features -->
+    <section class="bg-[#F3ECE3] py-16 px-10 space-y-10">
+        <h1 class="font-bold text-4xl text-center">
+            Take a deeper dive into a new way to work
+        </h1>
+
+        <!-- card container -->
+        <div class="flex items-center justify-between gap-5">
+            <!-- card 1 -->
+            <div
+                class="w-80 p-2 bg-white h-[430px] relative hover:scale-[1.05] transition-all duration-200 ease-in-out cursor-pointer">
+                <img src="https://a.slack-edge.com/b37cac3/marketing/img/promos/promo-card-dreamforce-2023@2x.png"
+                    alt="image1" />
+                <p class="mt-5 text-md text-gray-600 font-semibold">Event</p>
+
+                <h1 class="text-2xl font-bold">
+                    Ready for the future of AI in slack?
+                </h1>
+                <div
+                    class="flex items-center justify-between text-[#1264A3] text-sm font-bold absolute bottom-2 left-0 w-full px-2">
+                    <p>REGISTER NOW</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div
+                class="w-80 p-2 bg-white h-[430px] relative hover:scale-[1.05] transition-all duration-200 ease-in-out cursor-pointer">
+                <img src="https://a.slack-edge.com/6b9d9e8/marketing/img/promos/wtny-resource-tile@2x.jpg"
+                    alt="image1" />
+                <p class="mt-5 text-md text-gray-600 font-semibold">On demand</p>
+                <h1 class="text-2xl font-bold">
+                    Big things are launching. Relive the highlights of World Tour New
+                    York!
+                </h1>
+                <div
+                    class="flex items-center justify-between text-[#1264A3] text-sm font-bold absolute bottom-2 left-0 w-full px-2">
+                    <p>WATCH NOW</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div
+                class="w-80 p-2 bg-white h-[430px] relative hover:scale-[1.05] transition-all duration-200 ease-in-out cursor-pointer">
+                <img src="https://a.slack-edge.com/426ed86/marketing/img/promos/promo-open-ai@2x.jpg" alt="image1" />
+                <p class="mt-5 text-md text-gray-600 font-semibold">Customer story</p>
+                <h1 class="text-2xl font-bold">
+                    The net big things? AI for everyone.
+                </h1>
+                <div
+                    class="flex items-center justify-between text-[#1264A3] text-sm font-bold absolute bottom-2 left-0 w-full px-2">
+                    <p>READ MORE</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div
+                class="w-80 p-2 bg-white h-[430px] relative hover:scale-[1.05] transition-all duration-200 ease-in-out cursor-pointer">
+                <img src="https://a.slack-edge.com/426ed86/marketing/img/promos/promo-boost-productivity@2x.jpg"
+                    alt="image1" />
+                <p class="mt-5 text-md text-gray-600 font-semibold">Webinar</p>
+                <h1 class="text-2xl font-bold">
+                    Top Slack tips to boost productivity
+                </h1>
+                <div
+                    class="flex items-center justify-between text-[#1264A3] text-sm font-bold absolute bottom-2 left-0 w-full px-2">
+                    <p>WATCH NOW</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- for footer section -->
+    <footer>
+        <!-- for call to action -->
+        <div class="bg-[#4A154B] text-white py-28 gap-10 flex flex-col items-center justify-center custom-curve">
+            <h1 class="text-5xl font-bold">
+                See all that you can accomplish with Slack
+            </h1>
+            <div class="flex items-center gap-3">
+                <button
+                    class="border-[1.5px] border-white bg-white text-[#541554] rounded-md py-4 px-10 font-bold text-[0.95rem]">
+                    TRY FOR FREE
+                </button>
+                <button
+                    class="border-[1.5px] border-white bg-transparent text-white rounded-md py-4 px-10 font-bold text-[0.95rem]">
+                    TALK TO SALES
+                </button>
+            </div>
+        </div>
+
+        <!-- for footer menu items -->
+        <div class="flex items-start justify-between ml-10 mr-40 mt-10">
+            <img class="w-14" src="./images/footerLogo.png" alt="footer logo" />
+
+            <!-- for why slack menu list -->
+            <ul class="text-sm font-medium text-gray-600 space-y-5">
+                <li class="text-base text-black">WHY SLACK?</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Slack vs email</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Channels</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Engagement</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Scale</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Watch the demo</li>
+            </ul>
+
+            <!-- for product menu list -->
+            <ul class="text-sm font-medium text-gray-600 space-y-5">
+                <li class="text-base text-black">PRODUCTS</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Features</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Integrations</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Enterpise</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Solutions</li>
+            </ul>
+
+            <!-- for pricing menu list -->
+            <ul class="text-sm font-medium text-gray-600 space-y-5">
+                <li class="text-base text-black">PRICING</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Subscriptions</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Paid vs free</li>
+            </ul>
+
+            <!-- for resources menu list -->
+            <ul class="text-sm font-medium text-gray-600 space-y-5">
+                <li class="text-base text-black">RESOURCES</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Partners</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Developers</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Community</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Apps</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Blog</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Help Centre</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Events</li>
+            </ul>
+
+            <!-- for company menu list -->
+            <ul class="text-sm font-medium text-gray-600 space-y-5">
+                <li class="text-base text-black">COMPANY</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">About us</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Leadership</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">News</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Media kit</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Careers</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Slack shop</li>
+            </ul>
+        </div>
+
+        <!-- for horizontal line -->
+        <div class="h-[1px] mx-10 bg-gray-300 mt-16 mb-5"></div>
+
+        <!-- for footer bottom -->
+        <div class="mx-10 flex items-center justify-between text-sm font-bold">
+            <!-- for menu -->
+            <ul class="flex items-center justify-between gap-5">
+                <li class="hover:text-[#1264A3] cursor-pointer">Status</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Privacy</li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Terms</li>
+                <li class="hover:text-[#1264A3] cursor-pointer flex items-center">
+                    <img src="./images/footerCheck.png" alt="footer check" class="w-10" />
+                    Your privacy choices
+                </li>
+                <li class="hover:text-[#1264A3] cursor-pointer">
+                    Cookie preferences
+                </li>
+                <li class="hover:text-[#1264A3] cursor-pointer">Contact us</li>
+                <li class="hover:text-[#1264A3] cursor-pointer flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                    Change region
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                        stroke="currentColor" class="w-3 h-3 mt-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </li>
+            </ul>
+
+            <div class="flex items-center gap-8">
+                <!-- for download slack -->
+                <div class="flex items-center gap-1 hover:text-[#1264A3] cursor-pointer">
+                    <svg class="c-nav--footer__download-icon" width="19" height="16" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.75938 15.7354C3.07813 15.7354 2.45 15.5572 1.875 15.2009C1.3 14.8445 0.84375 14.3641 0.50625 13.7597C0.16875 13.1552 0 12.4966 0 11.784C0 11.135 0.140625 10.5273 0.421875 9.96101C0.709375 9.39471 1.1 8.93021 1.59375 8.56753C1.4875 8.19212 1.43438 7.8167 1.43438 7.44129C1.43438 6.72864 1.60313 6.07008 1.94063 5.46561C2.27813 4.86113 2.73438 4.38391 3.30938 4.03395C3.88438 3.67763 4.50938 3.49947 5.18438 3.49947C5.28438 3.49947 5.43438 3.50583 5.63438 3.51855C6.19063 2.57684 6.93125 1.83238 7.85625 1.28517C8.7875 0.737961 9.7875 0.464355 10.8563 0.464355C11.9625 0.464355 12.9875 0.75705 13.9313 1.34244C14.875 1.92146 15.6219 2.70728 16.1719 3.6999C16.7281 4.69251 17.0063 5.77421 17.0063 6.94498C17.5563 7.40948 17.9844 7.97896 18.2906 8.65343C18.5969 9.3279 18.75 10.0437 18.75 10.8009C18.75 11.6917 18.5375 12.5157 18.1125 13.2729C17.6938 14.0301 17.125 14.6282 16.4063 15.0672C15.6938 15.5126 14.9125 15.7354 14.0625 15.7354H3.75938ZM14.0625 14.3037C14.6562 14.3037 15.2031 14.1478 15.7031 13.836C16.2094 13.5179 16.6094 13.0916 16.9031 12.5571C17.1969 12.0162 17.3438 11.4308 17.3438 10.8009C17.3438 10.1646 17.1969 9.57923 16.9031 9.04475C16.6094 8.5039 16.2156 8.07758 15.7219 7.7658C15.6656 7.73399 15.625 7.69899 15.6 7.66081C15.5813 7.62263 15.5719 7.57173 15.5719 7.5081C15.5719 7.45084 15.575 7.3713 15.5813 7.26949C15.5938 7.16769 15.6 7.06588 15.6 6.96407C15.6 6.04781 15.3875 5.20155 14.9625 4.42527C14.5375 3.64899 13.9594 3.03497 13.2281 2.58321C12.5031 2.12508 11.7125 1.89601 10.8563 1.89601C10.2063 1.89601 9.59063 2.02963 9.00938 2.29688C8.42813 2.55775 7.91875 2.9268 7.48125 3.40402C7.04375 3.88124 6.70625 4.42527 6.46875 5.03611C6.43125 5.13792 6.375 5.18882 6.3 5.18882C6.25625 5.18882 6.2125 5.17609 6.16875 5.15064C5.8625 5.0043 5.53438 4.93112 5.18438 4.93112C4.75938 4.93112 4.36562 5.04247 4.00313 5.26517C3.64687 5.48788 3.3625 5.7933 3.15 6.18143C2.94375 6.56321 2.84063 6.98316 2.84063 7.44129C2.84063 7.74671 2.8875 8.03941 2.98125 8.31937C3.08125 8.59298 3.21875 8.84113 3.39375 9.06383C3.4375 9.11474 3.45938 9.16246 3.45938 9.207C3.45938 9.26427 3.40625 9.30244 3.3 9.32153C2.94375 9.39152 2.62188 9.54423 2.33438 9.77966C2.04688 10.0151 1.81875 10.3078 1.65 10.6577C1.4875 11.0077 1.40625 11.3831 1.40625 11.784C1.40625 12.2421 1.50938 12.6652 1.71563 13.0534C1.92813 13.4352 2.21563 13.7406 2.57812 13.9696C2.94062 14.1923 3.33438 14.3037 3.75938 14.3037H14.0625ZM9.60938 12.3948C9.42188 12.3948 9.25625 12.3216 9.1125 12.1753L6.3 9.32153C6.1625 9.18155 6.09375 9.01611 6.09375 8.82523C6.09375 8.62798 6.1625 8.45936 6.3 8.31937C6.44375 8.17303 6.6125 8.09985 6.80625 8.09985C6.99375 8.09985 7.15625 8.16984 7.29375 8.30983L8.90625 9.94192V5.95237C8.90625 5.74876 8.97188 5.58014 9.10313 5.44652C9.24063 5.30653 9.40938 5.23654 9.60938 5.23654C9.79063 5.23654 9.95625 5.30653 10.1063 5.44652C10.2438 5.57378 10.3125 5.74239 10.3125 5.95237V9.94192L11.9344 8.30983C12.0719 8.16984 12.2344 8.09985 12.4219 8.09985C12.5969 8.09985 12.7688 8.17939 12.9375 8.33846C13.0625 8.45936 13.125 8.61843 13.125 8.81568C13.125 9.01929 13.0563 9.18791 12.9188 9.32153L10.1063 12.1753C9.95 12.3216 9.78438 12.3948 9.60938 12.3948Z"
+                            fill="#1264A3"></path>
+                    </svg>
+                    <p>Download Slack</p>
+                </div>
+
+                <!-- for social media -->
+                <div class="flex items-center gap-5">
+                    <!-- for twitter icon -->
+                    <svg class="c-nav--footer__svgicon hover:text-[#1264A3] cursor-pointer" width="16" height="16"
+                        version="1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31.993 6.077c-1.177.523-2.44.876-3.77 1.033 1.355-.812 2.396-2.098 2.887-3.63-1.27.75-2.673 1.3-4.168 1.592C25.744 3.797 24.038 3 22.15 3c-3.626 0-6.563 2.938-6.563 6.563 0 .514.057 1.016.17 1.496C10.3 10.783 5.464 8.17 2.227 4.2c-.565.97-.89 2.098-.89 3.3 0 2.28 1.16 4.287 2.92 5.465-1.076-.035-2.088-.33-2.973-.82v.08c0 3.182 2.26 5.835 5.264 6.438-.55.15-1.13.23-1.73.23-.423 0-.833-.04-1.233-.117.834 2.606 3.26 4.504 6.13 4.558-2.245 1.76-5.075 2.81-8.15 2.81-.53 0-1.053-.03-1.566-.09C2.905 27.914 6.355 29 10.062 29c12.072 0 18.675-10 18.675-18.675 0-.284-.008-.568-.02-.85 1.283-.925 2.395-2.08 3.276-3.398z">
+                        </path>
+                    </svg>
+
+                    <!-- for facebook icon -->
+                    <svg class="c-nav--footer__svgicon hover:text-[#1264A3] cursor-pointer" width="16" height="16"
+                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M15.115 0H.885A.883.883 0 0 0 0 .885v14.23c0 .49.395.885.885.885h7.659V9.803h-2.09v-2.4h2.09V5.62c0-2.069 1.27-3.189 3.104-3.189.875 0 1.643.053 1.867.096v2.155h-1.291c-1.003 0-1.184.469-1.184 1.173v1.547h2.379l-.31 2.4H11.04V16h4.075c.49 0 .885-.395.885-.885V.885A.883.883 0 0 0 15.115 0z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+
+                    <!-- for youtube icon -->
+                    <svg version="1" class="c-nav--footer__svgicon hover:text-[#1264A3] cursor-pointer" width="16"
+                        height="16" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31.67 9.18s-.312-2.354-1.27-3.39c-1.218-1.358-2.58-1.366-3.206-1.443C22.717 4 16.002 4 16.002 4h-.015s-6.715 0-11.19.347c-.626.077-1.988.085-3.206 1.443C.635 6.826.32 9.18.32 9.18S0 11.94 0 14.7v2.59c0 2.762.32 5.522.32 5.522s.312 2.352 1.27 3.386c1.22 1.358 2.816 1.317 3.528 1.46 2.56.26 10.877.342 10.877.342s6.722-.012 11.2-.355c.624-.08 1.987-.088 3.204-1.446.956-1.036 1.27-3.388 1.27-3.388s.32-2.76.32-5.523V14.7c0-2.76-.32-5.522-.32-5.522z">
+                        </path>
+                        <path fill="#FFF" d="M12 10v12l10-6"></path>
+                    </svg>
+
+                    <!-- for linkedin icon -->
+                    <svg class="c-nav--footer__svgicon hover:text-[#1264A3] cursor-pointer" width="16" height="16"
+                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.816 0C15.466 0 16 .512 16 1.152v13.696c0 .63-.533 1.152-1.184 1.152H1.184C.534 16 0 15.477 0 14.848V1.152C0 .512.533 0 1.184 0zM3.563 4.96a1.382 1.382 0 0 0 0-2.763c-.768 0-1.376.619-1.376 1.376 0 .768.608 1.387 1.376 1.387zm10.069 4.49c0-2.058-.437-3.637-2.848-3.637-1.152 0-1.92.63-2.24 1.227h-.032V5.995H6.24v7.637h2.368V9.856c0-.992.181-1.963 1.419-1.963 1.216 0 1.237 1.142 1.237 2.027v3.712h2.368zM2.368 13.633h2.379V5.995H2.368z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- for last line -->
+        <p class="mx-10 text-xs py-10 font-semibold">
+            ©2024 Slack Technologies, LLC, a Salesforce company. All rights
+            reserved. Various trademarks held by their respective owners.
+        </p>
+    </footer>
+</body>
+
+</html>

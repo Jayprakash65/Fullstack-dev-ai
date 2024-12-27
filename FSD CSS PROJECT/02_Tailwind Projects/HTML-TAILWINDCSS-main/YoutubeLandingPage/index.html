@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="bg-black">
+    <nav
+      class="flex items-center z-10 justify-between px-4 py-2 bg-black text-white fixed w-full top-0"
+    >
+      <!-- Left Section -->
+      <div class="flex items-center gap-4">
+        <i
+          class="fa fa-bars text-xl cursor-pointer hover:bg-gray-800 p-2 rounded-full"
+        ></i>
+        <div class="flex items-center gap-1 cursor-pointer">
+          <img src="assets/youtube.png" alt="" class="h-5" />
+          <h1 class="text-xl font-semibold">
+            YouTube
+            <sup class="text-xs text-gray-400 ml-1">IN</sup>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Middle Section (Search) -->
+      <div class="flex items-center flex-1 justify-center max-w-2xl gap-4">
+        <div class="flex items-center flex-1 max-w-[600px]">
+          <input
+            type="search"
+            placeholder="Search"
+            class="w-full px-4 py-2 bg-black border border-gray-700 rounded-l-full focus:outline-none focus:border-blue-500"
+          />
+          <button
+            class="px-6 py-2 bg-gray-800 border border-l-0 border-gray-700 rounded-r-full hover:bg-gray-700"
+          >
+            <i class="fa fa-search text-gray-400"></i>
+          </button>
+        </div>
+        <div class="p-2 hover:bg-gray-800 rounded-full cursor-pointer">
+          <i class="fa fa-microphone text-xl"></i>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="flex items-center gap-4">
+        <div class="p-2 hover:bg-gray-800 rounded-full cursor-pointer">
+          <i class="fa fa-video-camera text-xl"></i>
+        </div>
+        <div class="relative p-2 hover:bg-gray-800 rounded-full cursor-pointer">
+          <i class="fa fa-bell text-xl"></i>
+          <span
+            class="absolute top-0 right-0 bg-red-600 text-xs rounded-full px-1"
+            >9+</span
+          >
+        </div>
+        <div
+          class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa fa-user text-sm"></i>
+        </div>
+      </div>
+    </nav>
+
+    <section class="flex h-screen bg-black text-white pt-16">
+      <!-- Left Content Area -->
+      <div class="w-64 overflow-y-auto fixed h-screen bg-black px-3 py-2">
+        <!-- Main Navigation -->
+        <div class="mb-2">
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-home text-xl w-6"></i>
+              <span>Home</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-play text-xl w-6"></i>
+              <span>Shorts</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-youtube-play text-xl w-6"></i>
+              <span>Subscriptions</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-music text-xl w-6"></i>
+              <span>YouTube Music</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-gray-700 my-3" />
+
+        <!-- You Section -->
+        <div class="mb-2">
+          <div>
+            <button
+              class="w-full flex items-center justify-between px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <span class="font-medium">You</span>
+              <i class="fa fa-angle-right"></i>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-history text-xl w-6"></i>
+              <span>History</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-play text-xl w-6"></i>
+              <span>Playlists</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-video-camera text-xl w-6"></i>
+              <span>Your videos</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-lightbulb-o text-xl w-6"></i>
+              <span>Your courses</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-clock-o text-xl w-6"></i>
+              <span>Watch later</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-thumbs-up text-xl w-6"></i>
+              <span>Liked videos</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-download text-xl w-6"></i>
+              <span>Downloads</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-scissors text-xl w-6"></i>
+              <span>Your clips</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-gray-700 my-3" />
+
+        <!-- Subscriptions Section -->
+        <div class="mb-2">
+          <h3 class="text-base px-3 py-1 font-medium">Subscriptions</h3>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <img
+                src="https://api.dicebear.com/6.x/initials/svg?seed=MS"
+                class="w-6 h-6 rounded-full"
+              />
+              <span>Mr Star Sahil</span>
+              <span class="ml-auto text-red-600">•</span>
+            </button>
+          </div>
+          <!-- Add more subscriptions following the same pattern -->
+        </div>
+
+        <hr class="border-gray-700 my-3" />
+
+        <!-- More for YouTube Section -->
+        <div class="mb-2">
+          <h3 class="text-base px-3 py-1 font-medium">More for YouTube</h3>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <img src="assets/studion.png" alt="" class="w-6 h-6" />
+              <span>YouTube Studio</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <img src="assets/music.png" alt="" class="w-6 h-6" />
+              <span>YouTube Music</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <img src="assets/youtube.png" alt="" class="w-6 h-6" />
+              <span>YouTube Kids</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-gray-700 my-3" />
+
+        <!-- Explore Section -->
+        <div class="mb-2">
+          <h3 class="text-base px-3 py-1 font-medium">Explore</h3>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-fire text-xl w-6"></i>
+              <span>Trending</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-shopping-cart text-xl w-6"></i>
+              <span>Shopping</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-music text-xl w-6"></i>
+              <span>Music</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-film text-xl w-6"></i>
+              <span>Movies</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-wifi text-xl w-6"></i>
+              <span>Live</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-gamepad text-xl w-6"></i>
+              <span>Gaming</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-newspaper-o text-xl w-6"></i>
+              <span>News</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-trophy text-xl w-6"></i>
+              <span>Sports</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-book text-xl w-6"></i>
+              <span>Learning</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-paint-brush text-xl w-6"></i>
+              <span>Fashion & beauty</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-podcast text-xl w-6"></i>
+              <span>Podcasts</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="border-gray-700 my-3" />
+
+        <!-- Settings Section -->
+        <div class="mb-2">
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-gear text-xl w-6"></i>
+              <span>Settings</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-flag text-xl w-6"></i>
+              <span>Report history</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-question-circle text-xl w-6"></i>
+              <span>Help</span>
+            </button>
+          </div>
+          <div>
+            <button
+              class="w-full flex items-center gap-6 px-3 py-2 hover:bg-gray-800 rounded-lg"
+            >
+              <i class="fa fa-send-o text-xl w-6"></i>
+              <span>Send feedback</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content Area -->
+      <div class="flex-1 ml-64 bg-black min-h-screen text-white pt-14 px-8 ">
+        <!-- Filter Buttons -->
+        <div
+          class="flex gap-3 overflow-x-auto py-3 fixed z-20  top-14 bg-black mb-4 "
+        >
+          <button
+            class="px-3 py-1.5 bg-white text-black rounded-lg hover:bg-gray-200 whitespace-nowrap font-medium"
+          >
+            All
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Music
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Vishwa Mohan
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Mixes
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            T-Series
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Live
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Web Development
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Watched
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Data Science
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            New to you
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Mixes
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            T-Series
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Live
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Web Development
+          </button>
+          <button
+            class="px-3 py-1.5 bg-gray-800 rounded-lg hover:bg-gray-700 whitespace-nowrap"
+          >
+            Watched
+          </button>
+        </div>
+
+        <!-- Video Grid -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        >
+          <!-- Video Card Template -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail1.jpg"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+              <!-- Hover overlay with duration or progress can be added here -->
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Java Journey Begins: Your Complete Guide & Course Roadmap |
+                  Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">457k views • 1 year ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diwali Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/Thumbnail2.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  ✨ Wishing You a Joyful & Prosperous Diwali! | Happy Diwali
+                  🪔💣🌟
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">195 views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LeetCode Challenge Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail3.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  30 Days Javascript LeetCode Challenge | Day-1 | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">4.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Design Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail4.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Design Your Own Google Maps | System Design | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">6.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Repeat the above video card structure for the remaining videos -->
+            <!-- Video Card Template -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail1.jpg"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+              <!-- Hover overlay with duration or progress can be added here -->
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Java Journey Begins: Your Complete Guide & Course Roadmap |
+                  Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">457k views • 1 year ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diwali Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/Thumbnail2.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  ✨ Wishing You a Joyful & Prosperous Diwali! | Happy Diwali
+                  🪔💣🌟
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">195 views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LeetCode Challenge Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail3.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  30 Days Javascript LeetCode Challenge | Day-1 | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">4.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Design Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail4.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Design Your Own Google Maps | System Design | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">6.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+           <!-- Video Card Template -->
+           <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail1.jpg"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+              <!-- Hover overlay with duration or progress can be added here -->
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Java Journey Begins: Your Complete Guide & Course Roadmap |
+                  Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">457k views • 1 year ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diwali Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/Thumbnail2.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  ✨ Wishing You a Joyful & Prosperous Diwali! | Happy Diwali
+                  🪔💣🌟
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">195 views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LeetCode Challenge Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail3.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  30 Days Javascript LeetCode Challenge | Day-1 | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">4.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Design Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail4.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Design Your Own Google Maps | System Design | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">6.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+           <!-- Video Card Template -->
+           <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail1.jpg"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+              <!-- Hover overlay with duration or progress can be added here -->
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Java Journey Begins: Your Complete Guide & Course Roadmap |
+                  Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">457k views • 1 year ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diwali Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/Thumbnail2.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  ✨ Wishing You a Joyful & Prosperous Diwali! | Happy Diwali
+                  🪔💣🌟
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">195 views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LeetCode Challenge Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail3.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  30 Days Javascript LeetCode Challenge | Day-1 | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">4.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- System Design Video Card -->
+          <div class="flex flex-col">
+            <div class="relative group cursor-pointer">
+              <img
+                src="assets/thumbnail4.png"
+                alt="Video thumbnail"
+                class="w-full aspect-video object-cover rounded-xl"
+              />
+            </div>
+            <div class="flex gap-3 mt-3">
+              <img
+                src="assets/Profile.png"
+                alt="Channel avatar"
+                class="w-9 h-9 rounded-full"
+              />
+              <div>
+                <h3 class="font-medium mb-1 line-clamp-2">
+                  Design Your Own Google Maps | System Design | Vishwa Mohan
+                </h3>
+                <p class="text-gray-400 text-sm">Vishwa Mohan</p>
+                <p class="text-gray-400 text-sm">6.2k views • 5 days ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </body>
+</html>

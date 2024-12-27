@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linkedin Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="bg-[#F4F2EE]">
+    <nav class="sticky top-0 w-full bg-white border-b border-gray-200 z-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex items-center justify-between h-14">
+          <!-- Left side: Logo and Search -->
+          <div class="flex items-center flex-1 max-w-xl">
+            <img src="assets/logo.png" alt="LinkedIn" class="h-8 w-8 mr-2" />
+            <div class="relative flex-1 max-w-xs hidden sm:block">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <i class="fa fa-search text-gray-500"></i>
+              </div>
+              <input
+                type="search"
+                placeholder="Search"
+                class="w-full pl-10 pr-4 py-1.5 bg-blue-50 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <!-- Right side: Navigation Items -->
+          <div class="flex items-center space-x-2 sm:space-x-6">
+            <div class="flex items-center">
+              <a href="#" class="flex flex-col items-center text-gray-500 hover:text-black">
+                <i class="fa fa-home text-xl"></i>
+                <p class="text-xs mt-1 hidden sm:block">Home</p>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <a href="#" class="flex flex-col items-center text-gray-500 hover:text-black">
+                <i class="fa fa-group text-xl"></i>
+                <p class="text-xs mt-1 hidden sm:block">My Network</p>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <a href="#" class="flex flex-col items-center text-gray-500 hover:text-black">
+                <i class="fa fa-address-book text-xl"></i>
+                <p class="text-xs mt-1 hidden sm:block">Jobs</p>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <a href="#" class="flex flex-col items-center text-gray-500 hover:text-black">
+                <i class="fa fa-envelope text-xl"></i>
+                <p class="text-xs mt-1 hidden sm:block">Messaging</p>
+              </a>
+            </div>
+            <div class="flex items-center">
+              <a href="#" class="flex flex-col items-center text-gray-500 hover:text-black">
+                <i class="fa fa-bell text-xl"></i>
+                <p class="text-xs mt-1 hidden sm:block">Notifications</p>
+              </a>
+            </div>
+            <div class="flex items-center border-l pl-2 sm:pl-6">
+              <a href="#" class="flex flex-col items-center text-gray-500 hover:text-black">
+                <div class="w-6 h-6 rounded-full overflow-hidden">
+                  <img src="assets/Profile.png" alt="Profile" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex items-center mt-1">
+                  <p class="text-xs hidden sm:block">Me</p>
+                  <i class="fa fa-caret-down text-xs ml-1 hidden sm:block"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <section class="p-4 sm:p-8 flex justify-center">
+     <div class="flex flex-col lg:flex-row w-full max-w-6xl">
+        <div class="w-full lg:w-[225px] h-fit bg-white rounded-lg border border-gray-300 mb-4 lg:mb-0 lg:mr-4 shadow-lg space-y-4 p-3">
+            <!-- Profile section -->
+            <div>
+              <div class="relative">
+                <div class="h-14 w-full">
+                  <img src="assets/image.png" alt="" class="w-full h-full object-cover rounded-t-lg" />
+                </div>
+                <div class="absolute left-1/4 -translate-x-1/2 -bottom-6">
+                  <img src="assets/Profile.png" alt="" class="w-16 h-16 rounded-full border-2 border-white" />
+                </div>
+              </div>
+              <div class="pt-8 px-3">
+                <h1 class="font-semibold text-base hover:underline cursor-pointer">Vishwa Mohan</h1>
+                <p class="text-xs text-gray-600 mt-1 leading-normal">
+                  Building AIMERZ.ai for 300 million students | AIMERZ.ai - India
+                </p>
+                <p class="text-xs text-gray-500 mt-1">Bengaluru, Karnataka, India</p>
+                <div class="flex mt-2 space-x-1">
+                  <img src="assets/aimerz.png" alt="" class="w-4 h-4 object-contain" />
+                  <p class="text-xs text-gray-600">Founder of AIMERZ</p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Stats section -->
+            <div class="mt-3 border-t border-gray-200 pt-3 ">
+              <div class="flex justify-between hover:bg-gray-100 px-3 py-1 cursor-pointer rounded">
+                <p class="text-xs text-black font-semibold">Profile Viewers</p>
+                <p class="text-sm font-semibold text-blue-600">4789</p>
+              </div>
+              <div class="flex justify-between hover:bg-gray-100 px-3 py-1 cursor-pointer rounded">
+                <p class="text-xs text-black font-semibold">Connections</p>
+                <p class="text-sm font-semibold text-blue-600">50345</p>
+              </div>
+              <div class="hover:bg-gray-100 px-3 py-1 cursor-pointer rounded">
+                <p class="text-xs text-gray-500 hover:text-blue-600">Manage your network</p>
+              </div>
+            </div>
+          
+            <!-- Quick links -->
+            <div class="mt-3 border-t border-gray-200 pt-3 pb-2">
+              <div class="flex items-center px-3 py-1.5 hover:bg-gray-100 cursor-pointer rounded">
+                <i class="fa fa-save text-black w-5"></i>
+                <p class="text-xs ml-2 font-semibold">Saved items</p>
+              </div>
+              <div class="flex items-center px-3 py-1.5 hover:bg-gray-100 cursor-pointer rounded">
+                <i class="fa fa-group text-black w-5"></i>
+                <p class="text-xs ml-2 font-semibold">Groups</p>
+              </div>
+              <div class="flex items-center px-3 py-1.5 hover:bg-gray-100 cursor-pointer rounded">
+                <i class="fa fa-calendar text-black w-5"></i>
+                <p class="text-xs ml-2 font-semibold">Events</p>
+              </div>
+            </div>
+        </div>
+          
+        <div class="w-full lg:flex-1">
+            <div class="bg-white rounded-lg border border-gray-300 p-4 mb-4 shadow-lg">
+                <!-- Top section with profile and post button -->
+                <div class="flex gap-2 mb-3">
+                  <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                    <img src="assets/Profile.png" alt="" class="w-full h-full object-cover" />
+                  </div>
+                  <button class="flex-grow text-left px-4 py-3 bg-white hover:bg-gray-100 rounded-full border border-gray-300 text-gray-500 text-sm font-medium">
+                    Start a post, try writing with AI
+                  </button>
+                </div>
+              
+                <!-- Bottom section with action buttons -->
+                <div class="flex justify-between pt-1">
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+                    <i class="fa fa-image text-blue-500 text-xl"></i>
+                    <p class="text-sm text-gray-500 font-medium hidden sm:block">Media</p>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+                    <i class="fa fa-calendar text-orange-400 text-xl"></i>
+                    <p class="text-sm text-gray-500 font-medium hidden sm:block">Event</p>
+                  </div>
+                  <div class="flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-lg cursor-pointer">
+                    <i class="fa fa-pencil text-orange-700 text-xl"></i>
+                    <p class="text-sm text-gray-500 font-medium hidden sm:block">Write article</p>
+                  </div>
+                </div>
+            </div>
+    
+            <div class="bg-white shadow-lg rounded-lg p-4">
+                <!-- Profile Section -->
+                <div class="flex items-center space-x-4">
+                  <img class="w-12 h-12 sm:w-16 sm:h-16 rounded-full" src="assets/Profile.png" alt="Profile Picture">
+                  <div>
+                    <h1 class="text-lg sm:text-xl font-bold">Vishwa Mohan</h1>
+                    <p class="text-sm text-gray-600">Building AIMERZ.ai for 300 million students | AIMERZ.ai - India's First Job-Focused Platform</p>
+                    <p class="text-xs text-gray-400">1mo</p>
+                  </div>
+                </div>
+              
+                <!-- Post Content -->
+                <div class="mt-4">
+                  <p class="text-gray-700">What's the best part of my job? ...more</p>
+                </div>
+              
+                <!-- Image Section -->
+                <div class="mt-4">
+                  <img class="w-full rounded-lg" src="assets/feed.png" alt="Feed Image">
+                </div>
+              
+                <!-- Interaction Stats -->
+                <div class="flex justify-between items-center mt-4 text-gray-500">
+                  <div class="flex items-center space-x-2">
+                    <i class="fa fa-heart text-blue-500"></i>
+                    <p class="text-xs sm:text-sm">You and 627 others</p>
+                  </div>
+                  <div class="flex space-x-4">
+                    <p class="text-xs sm:text-sm">15 comments</p>
+                    <p class="text-xs sm:text-sm">6 reposts</p>
+                  </div>
+                </div>
+              
+                <!-- Action Buttons -->
+                <div class="flex justify-between items-center mt-4 border-t pt-2">
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500">
+                    <i class="fa fa-thumbs-up"></i>
+                    <span class="hidden sm:inline">Like</span>
+                  </button>
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500">
+                    <i class="fa fa-commenting"></i>
+                    <span class="hidden sm:inline">Comment</span>
+                  </button>
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500">
+                    <i class="fas fa-recycle"></i>
+                    <span class="hidden sm:inline">Repost</span>
+                  </button>
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500">
+                    <i class="fa fa-send-o"></i>
+                    <span class="hidden sm:inline">Send</span>
+                  </button>
+                </div>
+            </div>
+        </div>
+          
+        <div class="bg-white h-fit rounded-lg border border-gray-300 p-4 w-full lg:w-[300px] mt-4 lg:mt-0 lg:ml-4 shadow-lg">
+            <!-- Header section -->
+            <div class="mb-2">
+              <div class="flex justify-between items-center mb-1">
+                <h1 class="text-base font-semibold">LinkedIn News</h1>
+                <i class="fa fa-newspaper-o text-lg text-gray-600 hover:text-gray-800 cursor-pointer"></i>
+              </div>
+              <h2 class="text-sm font-medium">Top stories</h2>
+            </div>
+          
+            <!-- News items -->
+            <div class="space-y-1">
+              <button class="w-full text-left hover:bg-gray-100 rounded p-1 transition-colors">
+                <p class="text-sm font-medium">India's top 20 startups</p>
+                <p class="text-xs text-gray-500">4d ago • 39,537 readers</p>
+              </button>
+              <button class="w-full text-left hover:bg-gray-100 rounded p-1 transition-colors">
+                <p class="text-sm font-medium">IT hiring</p>
+                <p class="text-xs text-gray-500">4d ago • 20,133 readers</p>
+              </button>
+              <button class="w-full text-left hover:bg-gray-100 rounded p-1 transition-colors">
+                <p class="text-sm font-medium">Gujarat semiconductor hub</p>
+                <p class="text-xs text-gray-500">4d ago • 15,716 readers</p>
+              </button>
+              <button class="w-full text-left hover:bg-gray-100 rounded p-1 transition-colors">
+                <p class="text-sm font-medium">Wedding business</p>
+                <p class="text-xs text-gray-500">4d ago • 7,453 readers</p>
+              </button>
+              <button class="w-full text-left hover:bg-gray-100 rounded p-1 transition-colors">
+                <p class="text-sm font-medium">Farmers and climate change</p>
+                <p class="text-xs text-gray-500">4d ago • 5,729 readers</p>
+              </button>
+          
+              <!-- Show more button -->
+              <button class="w-full text-center text-sm text-gray-500 hover:bg-gray-100 rounded p-1 mt-2 font-medium">
+                Show more
+              </button>
+            </div>
+        </div>
+     </div>
+    </section>
+  </body>
+</html>

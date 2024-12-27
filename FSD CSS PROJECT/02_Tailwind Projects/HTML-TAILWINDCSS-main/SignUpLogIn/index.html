@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Signup & Login</title>
+    <style>
+        /* Hide radio buttons visually while keeping them functional */
+        .tab-radio {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        /* Show/hide forms based on radio selection */
+        #login-tab:checked ~ #loginForm {
+            display: block;
+        }
+        #signup-tab:checked ~ #signupForm {
+            display: block;
+        }
+        
+        /* Style the labels based on radio selection */
+        #login-tab:checked ~ .tabs label[for="login-tab"] {
+            border-bottom-color: #3B82F6;
+            color: #3B82F6;
+        }
+        #signup-tab:checked ~ .tabs label[for="signup-tab"] {
+            border-bottom-color: #3B82F6;
+            color: #3B82F6;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-2xl">
+            <div class="w-full p-8">
+                <div class="flex justify-center mb-8">
+                    <img src="assets/Profile.png" alt="Logo" class="h-16 w-16 rounded-full"/>
+                </div>
+                
+                <!-- Radio buttons for tab control -->
+                <input type="radio" id="login-tab" name="tabs" class="tab-radio" checked>
+                <input type="radio" id="signup-tab" name="tabs" class="tab-radio">
+                
+                <!-- Tab buttons -->
+                <div class="tabs flex mb-8">
+                    <label for="login-tab" class="flex-1 py-2 px-4 text-center border-b-2 border-gray-200 text-gray-500 cursor-pointer">Login</label>
+                    <label for="signup-tab" class="flex-1 py-2 px-4 text-center border-b-2 border-gray-200 text-gray-500 cursor-pointer">Signup</label>
+                </div>
+                
+                <!-- Login Form -->
+                <form id="loginForm" class="space-y-6 hidden">
+                    <div>
+                        <label for="loginEmail" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="loginEmail" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="loginPassword" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="loginPassword" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="remember" class="h-4 w-4 text-blue-500 border-gray-300 rounded">
+                            <label for="remember" class="ml-2 block text-sm text-gray-700">Remember me</label>
+                        </div>
+                        <a href="#" class="text-sm text-blue-500 hover:text-blue-600">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Login</button>
+                </form>
+                
+                <!-- Signup Form -->
+                <form id="signupForm" class="space-y-6 hidden">
+                    <div>
+                        <label for="signupName" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="signupName" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="signupEmail" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="signupEmail" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="signupPassword" class="block text-sm font-medium text-gray-700">Password</label>
+                        <input type="password" id="signupPassword" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <button type="submit" class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Feedback Survey</title>
+  </head>
+
+  <body>
+    <h1>Event Feedback Survey</h1>
+    <form action="submit-event-feedback" method="post">
+      Event Name: Your Name:
+      <br /><br />
+
+      <label for="rating">Overall Rating:</label><br />
+
+      Excellent Good Average Poor Very Poor ><br /><br />
+
+      <label>Would you recommend this event to others?</label><br />
+
+      Yes No<br /><br />
+
+      <label for="comments">Additional Comments:</label><br />
+      <textarea id="comments" name="comments" rows="4" cols="50"></textarea
+      ><br /><br />
+    </form>
+
+    <hr />
+
+    <h1>Employee Satisfaction Survey</h1>
+    <form action="submit-employee-survey" method="post">
+      Employee Name
+      <br /><br />
+
+      <label for="department">Department:</label><br />
+      <br /><br />
+
+      How satisfied are you with your job?
+      <input
+        type="radio"
+        id="very-satisfied"
+        name="job_satisfaction"
+        value="very_satisfied"
+        required
+      />
+      Very Satisfied Satisfied Neutral Dissatisfied
+   
+      <label for="very-dissatisfied">Very Dissatisfied</label><br /><br />
+
+      <label for="work-environment"
+        >How would you rate the work environment?</label
+      ><br />
+      <select id="work-environment" name="work_environment" required>
+        Excellent
+        Good
+        Average
+        Poor
+      ><br /><br />
+
+      <label for="suggestions">Suggestions for Improvement:</label><br />
+     
+      ><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

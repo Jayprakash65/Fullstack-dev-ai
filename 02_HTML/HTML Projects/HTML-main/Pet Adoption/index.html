@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Adoption Form</title>
+  </head>
+  <body>
+    <h1>Pet Adoption Application</h1>
+
+    <img src="./images/Dog.jpg" alt="Cute puppy" width="300" />
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Pet Preference</legend>
+
+        <label for="pet-type">Type of Pet:</label>
+        <select id="pet-type" name="pet-type" required>
+          <option value="">Select one</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="bird">Bird</option>
+          <option value="other">Other</option></select
+        ><br /><br />
+
+        <label>Age Range:</label><br />
+        <input type="radio" id="young" name="age" value="young" required />
+        <label for="young">Young</label><br />
+        <input type="radio" id="adult" name="age" value="adult" />
+        <label for="adult">Adult</label><br />
+        <input type="radio" id="senior" name="age" value="senior" />
+        <label for="senior">Senior</label><br /><br />
+
+        <label for="reason">Why do you want to adopt a pet?</label><br />
+        <textarea
+          id="reason"
+          name="reason"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+      </fieldset>
+
+      <br />
+      <input type="submit" value="Submit Application" />
+    </form>
+
+    <h2>Watch Cute Puppy Videos</h2>
+    <video width="320" height="240" controls>
+      <source src="./Media/3191251-uhd_4096_2160_25fps.mp4" type="video/mp4" />
+    </video>
+  </body>
+</html>

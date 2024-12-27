@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Contact Us - SASS Page</title>
+</head>
+<body>
+    <!-- Header section with the main title and navigation links -->
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <!-- Navigation links to other pages -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area for the contact page -->
+    <main>
+        <!-- Contact form for user inquiries -->
+        <section id="contact-form">
+            <h2>Get in Touch</h2>
+
+            <!-- Form element for collecting user information -->
+            <form method="post" action="/submit-contact-form">
+                <!-- Input field for user's name -->
+                <div>
+                    <label for="name">Name:</label><br />
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <!-- Input field for user's email -->
+                <div>
+                    <label for="email">Email:</label><br />
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <!-- Textarea for user's message -->
+                <div >
+                    <label for="message">Message:</label><br />
+                    <textarea id="message" name="message" rows="4" required></textarea><br />
+                </div>
+
+                <!-- Submit button to send the form data -->
+                <button type="submit">Send Message</button> 
+            </form> 
+        </section>
+
+        <!-- Image representing customer support or communication -->
+        <img src="https://via.placeholder.com/800x400" alt="Contact Us">
+        
+    </main>
+
+    <!-- Footer section with copyright information -->
+    <footer >
+        <p>&copy; 2024 SASS Platform. All rights reserved.</p> 
+    </footer>
+
+</body >
+</html >

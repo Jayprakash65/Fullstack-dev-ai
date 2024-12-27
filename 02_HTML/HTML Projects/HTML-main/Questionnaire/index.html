@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Questionnaire</title>
+</head>
+<body>
+    <!-- Header section containing the main title and description of the questionnaire -->
+    <header>
+        <h1>Website Design Questionnaire</h1>
+        <p>Please fill out this questionnaire to help us better understand your project requirements.</p>
+    </header>
+
+    <!-- Main content area for the questionnaire form -->
+    <main>
+        <!-- Form element for collecting user responses -->
+        <form id="questionnaire-form" method="post" action="submit-questionnaire.php">
+            <!-- Section for general information about the respondent -->
+            <section>
+                <h2>General Information</h2>
+                <div>
+                    <!-- Input field for the respondent's name -->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <!-- Input field for the respondent's email -->
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <!-- Input field for the respondent's company name -->
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company">
+                </div>
+            </section>
+
+            <!-- Section for project details -->
+            <section>
+                <h2>Project Details</h2>
+                <div>
+                    <!-- Dropdown selection for project type -->
+                    <label for="project-type">Project Type:</label>
+                    <select id="project-type" name="project-type" required>
+                        <option value="">Select Project Type</option> <!-- Default option prompting selection -->
+                        <option value="website">Website</option>
+                        <option value="web-application">Web Application</option>
+                        <option value="e-commerce">E-commerce</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <!-- Textarea for project description -->
+                    <label for="project-description">Project Description:</label>
+                    <textarea id="project-description" name="project-description" rows="4" required></textarea> <!-- Multi-line input for detailed descriptions -->
+                </div>
+                <div>
+                    <!-- Input field for target audience -->
+                    <label for="target-audience">Target Audience:</label>
+                    <input type="text" id="target-audience" name="target-audience" required> <!-- Required input field -->
+                </div>
+            </section>
+
+            <!-- Section for design preferences -->
+            <section>
+                <h2>Design Preferences</h2>
+                <div>
+                    <!-- Input field for color scheme preferences -->
+                    <label for="color-scheme">Color Scheme:</label>
+                    <input type="text" id="color-scheme" name="color-scheme" required> <!-- Required input field -->
+                </div>
+                <div>
+                    <!-- Input field for font preferences -->
+                    <label for="font-preferences">Font Preferences:</label>
+                    <input type="text" id="font-preferences" name="font-preferences" required> <!-- Required input field -->
+                </div>
+                <div>
+                    <!-- Input field for style preferences -->
+                    <label for="style-preferences">Style Preferences:</label>
+                    <input type="text" id="style-preferences" name="style-preferences" required> <!-- Required input field -->
+                </div>
+            </section>
+
+            <!-- Section for additional information about budget and timeline -->
+            <section>
+                <h2>Additional Information</h2>
+                <div>
+                    <!-- Input field for budget with numeric input type -->
+                    <label for="budget">Budget:</label>
+                    <input type="number" id="budget" name="budget" min="0" step="1000" required> <!-- Required numeric input with minimum value and step increment -->
+                </div>
+                <div>
+                    <!-- Input field for project timeline -->
+                    <label for="timeline">Timeline:</label>
+                    <input type="text" id="timeline" name="timeline" required placeholder="e.g., 3 months"> <!-- Placeholder text to guide user input -->
+                </div>
+                <div>
+                    <!-- Textarea for additional notes or comments from the respondent -->
+                    <label for="additional-notes">Additional Notes:</label>
+                    <textarea id="additional-notes" name="additional-notes" rows="4"></textarea> <!-- Optional multi-line input for extra comments -->
+                </div>
+            </section>
+
+            <!-- Submit button to send the questionnaire data -->
+            <button type="submit">Submit Questionnaire</button>
+
+        </form> <!-- End of questionnaire form -->
+    </main>
+
+    <!-- Footer section with copyright information -->
+    <footer>
+        <p>&copy; 2023 Questionnaire. All rights reserved.</p> 
+    </footer>
+
+</body> 
+</html> 

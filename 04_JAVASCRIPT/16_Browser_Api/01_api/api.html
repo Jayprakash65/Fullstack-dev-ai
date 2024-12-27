@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background: #353434;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+    //    fetch('https://icanhazdadjoke.com/', {
+    //     headers: {
+    //         Accept: 'application/json'
+    //     }
+    //    })
+
+        // .then((res) => {
+        //     return res.json();
+        // })
+        // .then((data) => console.log(data.joke))
+        // .catch((err) => console.log(err))
+
+       async function getJoke(){
+        const response = await fetch('https://icanhazdadjoke.com/', {
+        headers: {
+            Accept: 'application/json'
+        }
+       })
+
+       const data = await response.json()
+
+       console.log(data.joke);
+       
+       }
+
+       getJoke()
+        
+    </script>
+</body>
+</html>
+
+
