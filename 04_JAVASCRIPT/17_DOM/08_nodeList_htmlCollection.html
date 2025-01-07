@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>Nav Item 1</button>
+        <button>Nav Item 2</button>
+        <button>Nav Item 3</button>
+        <button>Nav Item 4</button>
+        <button>Nav Item 5</button>
+    </div>
+
+    <script>
+        const buttonNodeList = document.querySelectorAll('button')
+        console.log(buttonNodeList);    // 5
+
+        const buttonHTMLCollection  = document.getElementsByTagName('button')
+        console.log(buttonHTMLCollection);  // 5
+
+        const newButton = document.createElement('button')
+        newButton.innerText = 'Nav Item 6'
+        const div = document.querySelector('div')
+        div.append(newButton)
+
+        console.log(buttonNodeList);    // 5        nodeList is static 
+        console.log(buttonHTMLCollection);  // 6    HTMLCollection is showing change
+
+        // Converting to array
+        console.log(Array.from(buttonNodeList));    
+        console.log(Array.from(buttonHTMLCollection));
+        
+        
+    </script>
+</body>
+</html>

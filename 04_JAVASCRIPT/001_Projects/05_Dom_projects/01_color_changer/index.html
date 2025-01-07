@@ -1,59 +1,89 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body style="background-color: black;">
-    
-<!--
-    
-Steps:
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-1. Acess the body.
-2. Change the background color property.
+      input {
+        height: 40px;
+        border-radius: 20px;
+        width: 250px;
+      }
 
+      button {
+        height: 40px;
+        border-radius: 30px;
+        width: 100px;
+      }
 
+      .input{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        outline: none;
+      }
 
--->
-
-<input type="text" placeholder="Enter the color"> <button>Change Background</button>
-<p>Yor background is <span></span></p>
-
-
-
-<script>
-
-
-const body = document.querySelector('body')
-const input = document.querySelector('input')
-const button = document.querySelector('button')
-const span = document.querySelector('span')
-
-const bgColor = localStorage.getItem('bgColor')
-if (bgColor) {
-    span.innerText = bgColor;
-    body.style.backgroundColor = bgColor;
-}
-
-button.addEventListener('click',() => {
-    let inputValue = input.value
-
-    if(!inputValue){
-        alert('Input field is empty')
-    }
-
-    localStorage.setItem('bgColor', inputValue);
-    window.location.reload()
-})
+      .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
 
 
+    </style>
+  </head>
+  <body style="background-color: black">
+    <!--
+    Steps:
 
+    1. Acess the body.
+    2. Change the background color property.
+    -->
 
+    <div class="main">
+      <div class="input">
+        <input type="text" placeholder="Enter the color" />
+        <button>Change Background</button>
+      </div>
 
+      <p class="para">Yor background is <span></span></p>
+    </div>
 
-</script>
+    <script>
+      const body = document.querySelector("body");
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
+      const span = document.querySelector("span");
+      const para = document.querySelector('.para')  
 
-</body>
+      let backgroundColor = localStorage.getItem("bgColor");
+
+      if (backgroundColor) {
+        body.style.backgroundColor = backgroundColor;
+        span.innerText = backgroundColor;
+      }
+
+      
+
+      button.addEventListener("click", function () {
+        let inputValue = input.value;
+
+        if (!inputValue) {
+          alert("Input is empty");
+        }
+
+        span.innerText = inputValue;
+        body.style.backgroundColor = inputValue;
+
+        localStorage.setItem("bgColor", inputValue);
+      });
+    </script>
+  </body>
 </html>

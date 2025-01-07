@@ -11,27 +11,20 @@
     <h1></h1>
 
     <script>
+      const button = document.querySelector("button");
+      const h1 = document.querySelector("h1");
 
-      const button = document.querySelector('button')
-      const h1 = document.querySelector('h1')
-
-      button.addEventListener('click',async function(){
-           
-        let response = await fetch('https://icanhazdadjoke.com/', {
-            headers: {
-            Accept: 'application/json'
-        }
-        })
+      button.addEventListener("click", async function () {
+        let response = await fetch("https://icanhazdadjoke.com/", {
+          headers: {
+            Accept: "application/json",
+          },
+        });
 
         let data = await response.json();
 
-        h1.innerHTML = data.joke
-
-      })
-
-
-
-
+        h1.innerHTML = data.joke;
+      });
     </script>
   </body>
 </html>

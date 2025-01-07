@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clickMe{
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .removeEvent{
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body style="margin: 0;">
+
+    <div style="width: 100%; background-color: rgb(37, 38, 38); height: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px;">
+
+        <button class="clickMe">Click Me</button>
+        <button class="removeEvent">Stop Event</button>
+        <button class="eventBtn">Event Button</button>
+
+        <input type="text">
+
+    </div>
+
+
+
+    <script>
+
+        const button = document.querySelector('button')
+        const button2 = document.querySelector('.removeEvent')
+        const button3 = document.querySelector('.eventBtn')
+        const input = document.querySelector('input')
+
+
+        function showAlert(){
+            alert('Button is clicked')
+        }
+
+        // Add event listener
+        button.addEventListener('click',showAlert)
+
+
+        // Remove event listner
+
+        button2.addEventListener('click', function(){
+            button.removeEventListener('click', showAlert)
+            alert('Event is removed')
+        })
+
+
+        // All info of element in the event, function parament as event or e
+
+        input.addEventListener('input',function(e){
+            console.log(e.target.value );
+            
+        })
+
+
+
+
+    </script>
+</body>
+</html>
