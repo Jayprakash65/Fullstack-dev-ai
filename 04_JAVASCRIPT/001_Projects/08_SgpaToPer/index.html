@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[FEF9E1] flex items-center justify-center w-[100%] h-[100vh]">
+    <div
+      class="bg-[E5D0AC] w-[90%] flex items-center justify-center flex-col gap-10 p-5 max-w-[600px] rounded"
+    >
+      <h1>SGPA TO PERCENTAGE CONVERTER</h1>
+      <div>
+        <label for="">SGPA</label>
+
+        <br />
+        <input class="sgpa p-1" type="text" value="" />
+        <br />
+        <br />
+        <label for="">In percentage</label>
+        <br />
+        <input class="percen p-1" type="text" value="" />
+      </div>
+
+      <button class="bg-black text-white p-3 rounded">Convert</button>
+    </div>
+
+    <script>
+      let sgpa = document.querySelector(".sgpa");
+      let percen = document.querySelector(".percen");
+      let button = document.querySelector("button");
+
+      button.addEventListener("click", () => {
+        let percentage = Number(sgpa.value * 10) - 7.5;
+
+        percen.value = percentage;
+
+      });
+
+    </script>
+  </body>
+</html>
