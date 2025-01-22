@@ -47,8 +47,6 @@ let createPost = () => {
       </div>`
     })
 
-    
-
     input.value = ''
 
 
@@ -79,3 +77,5 @@ let deletePost = (index) => {
 // })()
 
 console.log(data);
+
+
