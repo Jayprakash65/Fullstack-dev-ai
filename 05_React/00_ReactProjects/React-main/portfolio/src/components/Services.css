@@ -1,0 +1,300 @@
+.services-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 3rem;
+  position: relative;
+  margin-top: 5rem;
+  overflow: hidden;
+}
+
+.services-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.services-left h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.highlighted {
+  color: var(--orange);
+  font-size: 3rem;
+  animation: fadeInHighlight 1.5s ease-in-out;
+}
+
+.services-description {
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.8;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.services-download-btn {
+  padding: 0.8rem 1.5rem;
+  background: #FDC807;
+  color: #ffff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-download-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 20px rgba(255, 153, 51, 0.5);
+}
+
+.services-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  width: 280px;
+  height: 350px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card1 {
+  transform: translateY(0);
+}
+
+.card2 {
+  transform: translateY(50px);
+}
+
+.card3 {
+  transform: translateY(100px);
+}
+.blur {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+.effect1 {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, #f0f0ff, #abf1ff);
+  top: 5rem;
+  left: -5rem;
+}
+
+.effect2 {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, #e0b3ff, var(--purple));
+  top: 15rem;
+  right: -6rem;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInHighlight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 768px) {
+  .services-section {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .services-right {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .services-section {
+    padding: 6rem 4rem;
+    gap: 4rem;
+    max-width: 1800px;
+    margin: 8rem auto;
+  }
+
+  .services-left {
+    gap: 2rem;
+    max-width: 800px;
+  }
+
+  .services-left h2 {
+    font-size: 4rem;
+  }
+
+  .highlighted {
+    font-size: 4rem;
+  }
+
+  .services-description {
+    font-size: 1.4rem;
+    line-height: 1.9;
+  }
+
+  .services-download-btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.3rem;
+  }
+
+  .services-right {
+    gap: 3rem;
+  }
+
+  .card2 {
+    transform: translateY(80px);
+  }
+
+  .card3 {
+    transform: translateY(160px);
+  }
+
+  .blur {
+    filter: blur(150px);
+  }
+
+  .effect1 {
+    width: 300px;
+    height: 300px;
+    top: 8rem;
+    left: -8rem;
+  }
+
+  .effect2 {
+    width: 400px;
+    height: 400px;
+    top: 20rem;
+    right: -8rem;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .services-section {
+    padding: 8rem 6rem;
+    gap: 6rem;
+    max-width: 2400px;
+    margin: 12rem auto;
+  }
+
+  .services-left {
+    gap: 3rem;
+    max-width: 1200px;
+  }
+
+  .services-left h2 {
+    font-size: 5.5rem;
+  }
+
+  .highlighted {
+    font-size: 5.5rem;
+  }
+
+  .services-description {
+    font-size: 2rem;
+    line-height: 2;
+  }
+
+  .services-download-btn {
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+  }
+
+  .services-right {
+    gap: 4rem;
+  }
+
+  .card2 {
+    transform: translateY(120px);
+  }
+
+  .card3 {
+    transform: translateY(240px);
+  }
+
+  .blur {
+    filter: blur(200px);
+  }
+
+  .effect1 {
+    width: 450px;
+    height: 450px;
+    top: 10rem;
+    left: -10rem;
+  }
+
+  .effect2 {
+    width: 600px;
+    height: 600px;
+    top: 25rem;
+    right: -10rem;
+  }
+}
+
+@media screen and (min-width: 3440px) {
+  .services-section {
+    max-width: 3000px;
+    padding: 10rem 8rem;
+    height: 37vh;
+  }
+
+  .services-left {
+    max-width: 1500px;
+  }
+
+  .services-left h2,
+  .highlighted {
+    font-size: 7rem;
+  }
+
+  .services-description {
+    font-size: 2.5rem;
+  }
+
+  .services-download-btn {
+    padding: 2rem 4rem;
+    font-size: 2.2rem;
+  }
+
+  .effect1, .effect2 {
+    transform: scale(1.5);
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Pomodoro Timer",
+  "version": "1.0",
+  "description": "A simple Pomodoro timer with notifications.",
+  "permissions": [
+    "alarms", 
+    "contextMenus", 
+    "notifications", 
+    "storage", 
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/timer-16.png",
+      "48": "icons/timer-48.png",
+      "128": "icons/timer-128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/timer-16.png",
+    "48": "icons/timer-48.png",
+    "128": "icons/timer-128.png"
+  }
+}

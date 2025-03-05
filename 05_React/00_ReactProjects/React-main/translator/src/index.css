@@ -1,0 +1,224 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #600ee4, #23036a);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* Container styling */
+.container {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Wrapper styling */
+.wrapper {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f5f5, #fdfdfd);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Text input styling */
+.text-input {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+textarea {
+  height: 250px;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  resize: none;
+  padding: 15px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+textarea:focus {
+  background: #fff;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+textarea::placeholder {
+  color: #b7b7b7;
+  font-style: italic;
+}
+
+/* Controls and icon styling */
+.controls, li, .icons, .icons i {
+  display: flex;    
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  padding: 15px 0;
+}
+
+.controls .row .icons i {
+  width: 40px;
+  font-size: 18px;
+  color: #600ee4;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.controls .row .icons i:hover {
+  color: #23036a;
+  transform: scale(1.2);
+}
+
+.controls .row.from .icons {
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+}
+
+.controls .row.to .icons {
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+
+/* General styles for the wrapper */
+.wrapper {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+/* Text Input Area */
+.text-input textarea {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+.text-input textarea:focus {
+  border-color: #600ee4;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.controls select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  width: 48%;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #600ee4;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #490bb4;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* History Section */
+.history {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.history h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.history-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.history-text {
+  flex: 1;
+  padding: 5px 10px;
+}
+
+.history-text p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.language-tag {
+  font-size: 12px;
+  color: #888;
+}
+
+/* No History Text */
+.no-history {
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+  margin-top: 10px;
+}

@@ -1,0 +1,106 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background-color: #ffffff; /* White background */
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Header */
+h1 {
+    color: #4A90E2; /* Soft blue color */
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+
+/* Timer */
+.timer {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    background-color: #f7f8fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    transition: color 0.3s ease;
+}
+
+/* Buttons */
+.button {
+    background-color: #4A90E2; /* Soft blue button */
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effects */
+.button:hover {
+    background-color: #357ABD;
+    transform: translateY(-3px);
+}
+
+/* Button focus effect */
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(72, 144, 226, 0.5);
+}
+
+/* Button active effect */
+.button:active {
+    transform: translateY(1px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for the timer text */
+@keyframes timerBlink {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #4A90E2;
+    }
+    100% {
+        color: #333;
+    }
+}
+
+.timer.running {
+    animation: timerBlink 1s infinite; /* Blinking effect when timer is running */
+}

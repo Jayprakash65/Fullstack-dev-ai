@@ -1,0 +1,37 @@
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.App-header {
+  background-color: #ff6600; /* Orange background */
+  color: white;
+  padding: 20px;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #ff6600; /* Orange footer */
+  color: white;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}

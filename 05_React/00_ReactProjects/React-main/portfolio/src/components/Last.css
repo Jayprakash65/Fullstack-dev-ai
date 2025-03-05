@@ -1,0 +1,173 @@
+.footer-spacing {
+  margin-top: 7px; 
+  position: relative;
+  z-index: 1;
+}
+.footer-container {
+position: relative;
+overflow: hidden;
+min-height: 250px;
+padding-top: 2rem; 
+}
+
+.gradient-bg {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(90deg, #8B5CF6, #EC4899);
+}
+
+.footer-content {
+position: relative;
+text-align: center;
+padding: 4rem 2rem;
+z-index: 2;
+}
+
+.footer-email {
+font-size: 1.4rem;
+font-weight: 600;
+color: white;
+margin-bottom: 2rem;
+display: block;
+text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+transition: all 0.3s ease;
+}
+
+.footer-email:hover {
+transform: translateY(-3px);
+text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.social-icons {
+display: flex;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+}
+
+.social-icons a {
+width: 45px;
+height: 45px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 50%;
+color: white;
+font-size: 1.5rem;
+text-decoration: none;
+transition: all 0.3s ease;
+backdrop-filter: blur(5px);
+}
+
+.social-icons a:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.2);
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.social-icons a:nth-child(1):hover {
+background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icons a:nth-child(2):hover {
+background: #4267B2;
+}
+
+.social-icons a:nth-child(3):hover {
+background: #333;
+}
+
+@media (max-width: 768px) {
+.footer-container {
+  min-height: 200px;
+}
+
+.footer-content {
+  padding: 3rem 1.5rem;
+}
+
+.footer-email {
+  font-size: 1.2rem;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+}
+}
+
+@media (max-width: 480px) {
+.footer-container {
+  min-height: 180px;
+}
+
+.footer-content {
+  padding: 2rem 1rem;
+}
+
+.footer-email {
+  font-size: 1.1rem;
+}
+
+.social-icons {
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  font-size: 1.2rem;
+}
+}
+
+@media (min-width: 1024px) {
+.footer-container {
+  min-height: 300px;
+}
+
+.footer-content {
+  padding: 5rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-email {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+}
+
+.social-icons {
+  gap: 3rem;
+}
+
+.social-icons a {
+  width: 55px;
+  height: 55px;
+  font-size: 1.8rem;
+}
+}
+
+@media (min-width: 1440px) {
+.footer-container {
+  min-height: 350px;
+}
+
+.footer-content {
+  padding: 6rem 4rem;
+  max-width: 1400px;
+}
+
+.footer-email {
+  font-size: 2rem;
+}
+
+.social-icons a {
+  width: 65px;
+  height: 65px;
+  font-size: 2rem;
+}
+}

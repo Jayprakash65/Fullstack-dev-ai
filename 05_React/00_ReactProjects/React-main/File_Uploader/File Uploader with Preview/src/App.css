@@ -1,0 +1,94 @@
+/* General styles for the page */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header text */
+h3, h4 {
+  text-align: center;
+  color: #3a7ca5;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container styles */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Content area styles */
+.content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-info {
+  background-color: #3a7ca5;
+  color: #fff;
+}
+
+.btn-info:hover {
+  background-color: #316f91;
+}
+
+/* Utility classes */
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.my-3 {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hover effects for links */
+a {
+  color: #3a7ca5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
