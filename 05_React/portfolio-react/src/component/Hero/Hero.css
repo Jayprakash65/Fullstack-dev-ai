@@ -3,6 +3,7 @@
     align-items: center;
     flex-direction: column;
     gap: 35px;
+    margin-bottom: 120px;
 }
 
 .hero img{
@@ -26,4 +27,38 @@
     box-sizing: border-box;
     padding: 24px 48px;
     border-radius: 50px;
+}
+
+
+@media(max-width:768px){
+    .hero img{
+        margin-top: 120px;
+        width: 260px;
+        /* background-color: #DF8908; */
+    }
+    .hero h1{
+        margin-top: 0px;
+        width: 90%;
+        font-size: 50px;
+    }
+    .hero p{
+        width: 60%;
+        font-size: 18px;
+        line-height: 32px;
+        margin: 10px 0px;
+    }
+    .hero-action{
+        gap: 16px;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+    .hero-connect{
+        padding: 20px 30px;
+        border-radius: 40px;
+    }
+    .hero-resume{
+        padding: 20px 50px;
+        border-radius: 40px;
+    }
 }

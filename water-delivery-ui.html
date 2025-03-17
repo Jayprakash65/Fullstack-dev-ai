@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Delivery Tracking</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+      --primary: #1976d2;
+      --primary-dark: #0d47a1;
+      --secondary: #e3f2fd;
+      --danger: #f44336;
+      --success: #4caf50;
+      --warning: #ff9800;
+      --gray: #f5f5f5;
+      --dark: #333;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo svg {
+      margin-right: 0.5rem;
+    }
+
+    .header-actions button {
+      background-color: white;
+      color: var(--primary);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1rem 0;
+    }
+
+    .dashboard-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--dark);
+    }
+
+    .filter-options {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .filter-options select {
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .room-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .room-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .room-header {
+      background-color: var(--secondary);
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .room-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--primary-dark);
+    }
+
+    .room-content {
+      padding: 1rem;
+    }
+
+    .drum-counter {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .drum-status {
+      flex: 1;
+      height: 12px;
+      background-color: #eee;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-right: 0.5rem;
+    }
+
+    .drum-progress {
+      height: 100%;
+      background-color: var(--primary);
+      border-radius: 6px;
+    }
+
+    .drum-count {
+      font-weight: bold;
+      color: var(--dark);
+    }
+
+    .payment-status {
+      display: inline-block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .status-paid {
+      background-color: rgba(76, 175, 80, 0.1);
+      color: var(--success);
+    }
+
+    .status-due {
+      background-color: rgba(244, 67, 54, 0.1);
+      color: var(--danger);
+    }
+
+    .status-partial {
+      background-color: rgba(255, 152, 0, 0.1);
+      color: var(--warning);
+    }
+
+    .room-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .btn svg {
+      margin-right: 0.25rem;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background-color: var(--gray);
+      color: var(--dark);
+    }
+
+    .btn-secondary:hover {
+      background-color: #ddd;
+    }
+
+    .last-update {
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 0.5rem;
+    }
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      display: none;
+    }
+    
+    .modal {
+      background-color: white;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--primary-dark);
+    }
+    
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #777;
+    }
+    
+    .modal-body {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: var(--dark);
+    }
+    
+    .form-control {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+    }
+    
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.75rem 0;
+      box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #777;
+      text-decoration: none;
+      font-size: 0.75rem;
+    }
+    
+    .nav-item.active {
+      color: var(--primary);
+    }
+    
+    .nav-icon {
+      margin-bottom: 0.25rem;
+    }
+    
+    .main-content {
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      .room-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content container">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v3"></path>
+          <path d="M19.07 5a8.91 8.91 0 0 1 2.93 6"></path>
+          <path d="M12 17a5 5 0 0 0-10 0"></path>
+          <path d="M8 21v-4"></path>
+          <path d="M16 21v-4"></path>
+          <path d="M12 21v-8"></path>
+        </svg>
+        <span>Water Tracker</span>
+      </div>
+      <div class="header-actions">
+        <button id="add-room-btn">+ Add Room</button>
+      </div>
+    </div>
+  </header>
+  
+  <main class="main-content">
+    <div class="container">
+      <div class="dashboard-header">
+        <h2 class="dashboard-title">Rooms Overview</h2>
+        <div class="filter-options">
+          <select id="filter-status">
+            <option value="all">All Statuses</option>
+            <option value="paid">Paid</option>
+            <option value="due">Payment Due</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="room-grid" id="room-grid">
+        <!-- Rooms will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </main>
+  
+  <nav class="nav-bar">
+    <a href="#" class="nav-item active">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      <span>Dashboard</span>
+    </a>
+    <a href="#" class="nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon">
+        <path d="M12 2v3"></path>
+        <path d="M19.07 5a8.91 8.91 0 0 1 2.93 6"></path>
+        <path d="M5 11a9 9 0 0 0 9 9"></path>
+        <path d="M8 14a6 6 0 0 0 3 5.24"></path>
+      </svg>
+      <span>Deliveries</span>
+    </a>
+    <a href="#" class="nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon">
+        <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+        <line x1="2" x2="22" y1="10" y2="10"></line>
+      </svg>
+      <span>Payments</span>
+    </a>
+    <a href="#" class="nav-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="nav-icon">
+        <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+      <span>Settings</span>
+    </a>
+  </nav>
+  
+  <!-- Add Drums Modal -->
+  <div class="overlay" id="add-drums-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Add Water Drums</h3>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="room-number">Room</label>
+          <input type="text" id="drum-room-number" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+          <label for="drum-quantity">Number of Drums</label>
+          <select id="drum-quantity" class="form-control">
+            <option value="1">1 Drum</option>
+            <option value="2">2 Drums</option>
+            <option value="3">3 Drums</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="drum-notes">Notes (Optional)</label>
+          <textarea id="drum-notes" class="form-control" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="confirm-add-drum">Add Drums</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Record Payment Modal -->
+  <div class="overlay" id="payment-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Record Payment</h3>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="payment-room-number">Room</label>
+          <input type="text" id="payment-room-number" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+          <label for="payment-amount">Amount</label>
+          <input type="number" id="payment-amount" class="form-control" value="500">
+        </div>
+        <div class="form-group">
+          <label for="payment-method">Payment Method</label>
+          <select id="payment-method" class="form-control">
+            <option value="cash">Cash</option>
+            <option value="upi">UPI</option>
+            <option value="bank">Bank Transfer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="payment-notes">Notes (Optional)</label>
+          <textarea id="payment-notes" class="form-control" rows="2"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="confirm-payment">Record Payment</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Room Modal -->
+  <div class="overlay" id="room-modal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 class="modal-title">Add New Room</h3>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="new-room-number">Room Number/Name</label>
+          <input type="text" id="new-room-number" class="form-control" placeholder="e.g. 101, Ground Floor, etc.">
+        </div>
+        <div class="form-group">
+          <label for="room-notes">Notes (Optional)</label>
+          <textarea id="room-notes" class="form-control" rows="2" placeholder="Any special instructions"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary close-modal">Cancel</button>
+        <button class="btn btn-primary" id="confirm-add-room">Add Room</button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Sample data for rooms
+    let rooms = [
+      { id: 1, name: "Room 101", drumCount: 4, maxDrums: 6, status: "due", lastUpdate: "Today, 09:15 AM" },
+      { id: 2, name: "Room 102", drumCount: 6, maxDrums: 6, status: "paid", lastUpdate: "Yesterday, 05:30 PM" },
+      { id: 3, name: "Room 103", drumCount: 2, maxDrums: 6, status: "partial", lastUpdate: "Today, 10:45 AM" },
+      { id: 4, name: "Room 104", drumCount: 5, maxDrums: 6, status: "due", lastUpdate: "Today, 11:20 AM" },
+      { id: 5, name: "Room 105", drumCount: 0, maxDrums: 6, status: "paid", lastUpdate: "2 days ago" },
+      { id: 6, name: "Room 201", drumCount: 3, maxDrums: 6, status: "partial", lastUpdate: "Today, 08:30 AM" }
+    ];
+    
+    // DOM elements
+    const roomGrid = document.getElementById('room-grid');
+    const filterStatus = document.getElementById('filter-status');
+    const addDrumsModal = document.getElementById('add-drums-modal');
+    const paymentModal = document.getElementById('payment-modal');
+    const roomModal = document.getElementById('room-modal');
+    const closeBtns = document.querySelectorAll('.close-btn, .close-modal');
+    const addRoomBtn = document.getElementById('add-room-btn');
+    const confirmAddRoomBtn = document.getElementById('confirm-add-room');
+    
+    // Current room being edited
+    let currentRoomId = null;
+    
+    // Render all rooms
+    function renderRooms(roomsToRender = rooms) {
+      roomGrid.innerHTML = '';
+      
+      roomsToRender.forEach(room => {
+        const card = document.createElement('div');
+        card.className = 'room-card';
+        card.innerHTML = `
+          <div class="room-header">
+            <h3 class="room-title">${room.name}</h3>
+          </div>
+          <div class="room-content">
+            <div class="drum-counter">
+              <div class="drum-status">
+                <div class="drum-progress" style="width: ${(room.drumCount / room.maxDrums) * 100}%"></div>
+              </div>
+              <span class="drum-count">${room.drumCount}/${room.maxDrums} drums</span>
+            </div>
+            
+            <div class="payment-status status-${room.status}">
+              ${room.status === 'paid' ? 'Paid' : room.status === 'due' ? 'Payment Due' : 'Partially Paid'}
+            </div>
+            
+            <div class="room-actions">
+              <button class="btn btn-primary add-drum-btn" data-room-id="${room.id}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v3"></path>
+                  <path d="M19.07 5a8.91 8.91 0 0 1 2.93 6"></path>
+                  <path d="M5 11a9 9 0 0 0 9 9"></path>
+                  <path d="M8 14a6 6 0 0 0 3 5.24"></path>
+                </svg>
+                Add Drums
+              </button>
+              <button class="btn btn-secondary payment-btn" data-room-id="${room.id}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                  <line x1="2" x2="22" y1="10" y2="10"></line>
+                </svg>
+                Payment
+              </button>
+            </div>
+            
+            <p class="last-update">Last update: ${room.lastUpdate}</p>
+          </div>
+        `;
+        
+        roomGrid.appendChild(card);
+      });
+      
+      // Add event listeners for the newly created buttons
+      document.querySelectorAll('.add-drum-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const roomId = parseInt(this.getAttribute('data-room-id'));
+          openAddDrumsModal(roomId);
+        });
+      });
+      
+      document.querySelectorAll('.payment-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const roomId = parseInt(this.getAttribute('data-room-id'));
+          openPaymentModal(roomId);
+        });
+      });
+    }
+    
+    // Filter rooms by status
+    filterStatus.addEventListener('change', function() {
+      const status = this.value;
+      
+      if (status === 'all') {
+        renderRooms();
+      } else {
+        const filteredRooms = rooms.filter(room => room.status === status);
+        renderRooms(filteredRooms);
+      }
+    });
+    
+    // Open add drums modal
+    function openAddDrumsModal(roomId) {
+      const room = rooms.find(r => r.id === roomId);
+      currentRoomId = roomId;
+      
+      document.getElementById('drum-room-number').value = room.name;
+      document.getElementById('drum-quantity').value = '1';
+      document.getElementById('drum-notes').value = '';
+      
+      addDrumsModal.style.display = 'flex';
+    }
+    
+    // Open payment modal
+    function openPaymentModal(roomId) {
+      const room = rooms.find(r => r.id === roomId);
+      currentRoomId = roomId;
+      
+      document.getElementById('payment-room-number').value = room.name;
+      
+      paymentModal.style.display = 'flex';
+    }
+    
+    // Open add room modal
+    addRoomBtn.addEventListener('click', function() {
+      document.getElementById('new-room-number').value = '';
+      document.getElementById('room-notes').value = '';
+      
+      roomModal.style.display = 'flex';
+    });
+    
+    // Close modals
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        addDrumsModal.style.display = 'none';
+        paymentModal.style.display = 'none';
+        roomModal.style.display = 'none';
+      });
+    });
+    
+    // Add drums to a room
+    document.getElementById('confirm-add-drum').addEventListener('click', function() {
+      const room = rooms.find(r => r.id === currentRoomId);
+      const quantity = parseInt(document.getElementById('drum-quantity').value);
+      
+      // Update drum count
+      room.drumCount = Math.min(room.maxDrums, room.drumCount + quantity);
+      
+      // Update status if needed
+      if (room.drumCount >= room.maxDrums) {
+        room.status = 'due';
+      }
+      
+      // Update last update time
+      room.lastUpdate = 'Just now';
+      
+      // Close modal and refresh
+      addDrumsModal.style.display = 'none';
+      renderRooms();
+      
+      // Show payment alert if needed
+      if (room.drumCount >= room.maxDrums) {
+        alert(`Room ${room.name} has reached ${room.maxDrums} drums. Payment is due!`);
+      }
+    });
+    
+    // Record payment
+    document.getElementById('confirm-payment').addEventListener('click', function() {
+      const room = rooms.find(r => r.id === currentRoomId);
+      
+      // Reset drum count if fully paid
+      room.drumCount = 0;
+      room.status = 'paid';
+      room.lastUpdate = 'Just now';
+      
+      // Close modal and refresh
+      paymentModal.style.display = 'none';
+      renderRooms();
+      
+      alert(`Payment recorded for ${room.name}`);
+    });
+    
+    // Add new room
+    confirmAddRoomBtn.addEventListener('click', function() {
+      const roomName = document.getElementById('new-room-number').value.trim();
+      
+      if (roomName) {
+        const newRoom = {
+          id: rooms.length + 1,
+          name: roomName,
+          drumCount: 0,
+          maxDrums: 6,
+          status: 'paid',
+          lastUpdate: 'Just now'
+        };
+        
+        rooms.push(newRoom);
+        roomModal.style.display = 'none';
+        renderRooms();
+      } else {
+        alert('Please enter a room name');
+      }
+    });
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      renderRooms();
+    });
+  </script>
+</body>
+</html>
