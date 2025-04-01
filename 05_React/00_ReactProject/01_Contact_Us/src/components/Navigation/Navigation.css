@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 72px;
+    /* background-color: azure; */
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+.container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 24px;
+    font-weight: 500;
+}
