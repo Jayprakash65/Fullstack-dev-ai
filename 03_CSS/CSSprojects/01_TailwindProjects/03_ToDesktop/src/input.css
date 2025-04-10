@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@layer base{
+    .container{
+        @apply px-6 py-12 max-w-7xl mt-12 lg:mt-32   mx-auto;
+    }
+}
+
+@theme {
+    --breakpoint-xs: 30rem;
+    --breakpoint-2xl: 100rem;
+    --breakpoint-3xl: 120rem;
+    --breakpoint-3xl: 79.9375rem;
+
+
+  }

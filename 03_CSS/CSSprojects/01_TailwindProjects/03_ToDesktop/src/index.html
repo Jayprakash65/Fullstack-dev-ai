@@ -8,7 +8,7 @@
 
 </head>
 <body>
-    <section class="p-3 flex justify-between items-center max-w-[1808px] mx-auto bg-white">
+    <section class="p-3 flex justify-between items-center max-w-[1808px] mx-auto bg-white ">
         <a href="#" id="brand" class="flex gap-2 items-center flex-1">
             <img class="object-cover max-w-12 max-h-12" src="assets/asset 0.png" alt="logo">
             <span class="text-lg font-bold">ToDesktop</span>
@@ -115,12 +115,12 @@
 
     <!--Step by Step-->
 
-    <div id="steps" class=" px-6 py-12 max-w-7xl mt-12 lg:px-8 lg:mt-32   mx-auto">
+    <div id="steps" class="container">
         <h2 class="text-5xl sm:font-semibold mb-14">How its works</h2>
 
         <div class="flex flex-col gap-20">
-            <div id="step1" class="bg-[#ffffff] rounded-xl border px-8 py-12 flex flex-col lg:flex-row lg:gap-12">
-                <div class="flex flex-col gap-6 lg:w-1/2">
+            <div id="step1" class="bg-[#ffffff] rounded-xl border px-8 py-12 flex flex-col 3xl:flex-row  lg:gap-12">
+                <div class="flex flex-col gap-6  3xl:w-1/2">
                     <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 w-fit px-3 py-1 rounded-lg font-display">Step 1</span>
                     <h3 class="text-4xl font-semibold">Bootstrap straight from your web app</h3>
                     <p class="text-lg font-light">Copy and paste your web app url into ToDesktop. Customise your app design, app icon and window frame UI with no code.</p>
@@ -176,7 +176,7 @@
                     </ul>
                 </div>
     
-                <div class="max-w-150 rounded-2xl pt-12 lg:pt-5">
+                <div class="flex justify-center  rounded-2xl pt-12 lg:pt-5">
                     <img class="" src="assets/assets 39.png" alt="">
                 </div>
             </div>
@@ -309,8 +309,62 @@
 
     </div>
 
+    <!--Bento grid-->
 
+    <div id="bento-grid" class="container mt-0">
+        <h2 class="text-5xl sm:font-semibold mb-14">ToDesktop handles the details</h2>
 
+        <div id="grid-container" class="flex flex-col gap-8 lg:grid" style="grid-auto-rows: 96px;">
+
+            <div class="row-start-1 row-end-3 group rounded-2xl p-[1px] bg-[#e4e4e7] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="bg-[#F4F5F7] rounded-2xl w-full h-full p-6 flex flex-col items-center gap-3 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                    <h3 class="text-2xl font-semibold ">Native notification</h3>
+                    <img src="assets/asset 28.png" alt="">
+                </div>
+            </div>
+
+            <div class="row-start-1 row-end-4 group rounded-2xl p-[1px] bg-[#e4e4e7] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="bg-[#F4F5F7] rounded-2xl w-full h-full p-6 flex flex-col items-center gap-3 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                    <h3 class="text-2xl font-semibold ">Auto Update</h3>
+                    <p class="text-xl text-center">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+                    <img src="assets/asset 29.png" alt="">
+                </div>
+            </div>
+
+            <div class="row-start-1 row-end-3 group rounded-2xl p-[1px] bg-[#e4e4e7] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="bg-[#F4F5F7] rounded-2xl w-full h-full p-6 flex flex-col items-center gap-3 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                    <h3 class="text-2xl font-semibold ">Plugins</h3>
+                    <img src="assets/asset 30.png" alt="">
+                </div>
+            </div>
+
+            <div class="row-start-3 row-end-6 group rounded-2xl p-[1px] bg-[#e4e4e7] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="bg-[#F4F5F7] rounded-2xl w-full h-full p-6 flex flex-col items-center gap-3 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                    <h3 class="text-2xl font-semibold ">Access to Native APIs</h3>
+                    <p class="text-xl text-center">ToDesktop ensures the underlying browser, performance improvements, security patches and additional features are always up to date.</p>
+                    <img src="assets/asset 31.png" alt="">
+                </div>
+            </div>
+
+            <div class="row-start-4 row-end-6 group rounded-2xl p-[1px] bg-[#e4e4e7] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="bg-[#F4F5F7] rounded-2xl w-full h-full p-6 pb-0 flex flex-col items-center gap-3 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                    <h3 class="text-2xl font-semibold ">Customizable look and feel</h3>
+
+                    <img src="assets/asset 41.avif" alt="">
+                </div>
+            </div>
+
+            <div class="row-start-3 row-end-6  group rounded-2xl p-[1px] bg-[#e4e4e7] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                <div class="bg-[#F4F5F7] rounded-2xl w-full h-full p-6 flex flex-col items-center gap-4 hover:bg-gradient-to-br hover:from-red-50 hover:via-purple-50 hover:to-yellow-50">
+                    <h3 class="text-2xl font-semibold ">Native Installers</h3>
+                    <p class="text-xl text-center">We even provide a magic link which will detect your users operating system & download the most up to date version of your app.</p>
+                    <img src="assets/asset 42.png" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+        
 
 </main>
 

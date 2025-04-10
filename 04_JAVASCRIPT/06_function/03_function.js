@@ -113,7 +113,7 @@ console.log(addTwoNumbers(4,5));
 
 
 
-// High Order Function [HOF]: Pass a function as an argument and you can return a functionfrom another function.
+// High Order Function [HOF]: Pass a function as an argument and you can return a function from another function.
 
 function addprint(a,b){
     const result= a+b ;

@@ -21,3 +21,4 @@ Conditinals: The destiny of programs dertermined by the decisions you make.
 
 5. Function
     -> increase reausability and costomize(value) as per the need.
+    -> 

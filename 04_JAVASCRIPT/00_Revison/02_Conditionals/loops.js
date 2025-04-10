@@ -1,5 +1,5 @@
 // 1. for loop : when we want keep everything in same syantax.
-// 2. while loop: when i wnat to do the stuff manually and have dependence.
+// 2. while loop: he stuff mawhen i wnat to do tnually and have dependence.
 // 3. do-while loop: when i wnat to do the stuff manually and have dependence. and even if conditin is not met initally i will run once.
 
 
@@ -33,3 +33,10 @@ do{
     
 }while (i <= numberOfNotification);
 
+
+
+for (let i = 0; i <= 5; i++) {
+   console.log(i);
+   
+    
+}

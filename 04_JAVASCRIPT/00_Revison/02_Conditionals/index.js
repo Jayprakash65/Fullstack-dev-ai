@@ -7,7 +7,7 @@
 // const isItRaining = false; // bollean datatype
 
 // if(isItRaining){
-//     console.log('Dont go to clg');
+//     console.log('Don't go to clg');
 // }else{
 //     console.log('Go to clg');
 // }
@@ -31,5 +31,28 @@ if(lightColor === 'red'){
 }else{
     console.log("Invalid Output");
     
+}
+
+
+let day = 'mon';
+
+switch(day){
+    case 'mon':
+        console.log('Its working day');
+        break;
+    case 'tue':
+        console.log('Its working day');  
+        break; 
+        
+    case 'wed':
+        console.log('Its working day');  
+        break;
+
+        case 'thru':
+            console.log('Its working day');
+        
+        default:
+            console.log('Enter proper day');
+            
 }
 

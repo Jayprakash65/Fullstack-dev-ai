@@ -1,4 +1,5 @@
 // Write a program which says if the day is a week off or working day
+
 let day = "sunday";
 
 // if (day === "monday") {
