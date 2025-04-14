@@ -34,6 +34,9 @@ console.log(str);  // Output: "Jello"
 let str = "He said, \"Hello, World!\"";
 console.log(str);
 
+let str = "He said, \"Hello, Duniya!\"";
+console.log(str);
+
 
 /* 
 String Methods
