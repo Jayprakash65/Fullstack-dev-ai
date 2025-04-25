@@ -1,14 +1,7 @@
-function counter(){
-    let count = 0;
-
-    return function(){
-        count++
-        console.log(count);
-    }
+{
+    let car = 'BMW';
+    console.log(car);       // BMW
+    
 }
 
-const counterfn = counter()
-
-counterfn()
-counterfn()
-counterfn()
+console.log(car); 

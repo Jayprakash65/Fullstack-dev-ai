@@ -36,7 +36,46 @@ Scope: It is the area in which you can acess your variable/function/object.
 */
 
 
-// Closure: The child function has acess to parent scope 
+let fruit = "mango";
+
+function showFruit(){
+    console.log(fruit);     // mango
+    
+}
+showFruit()
+console.log(fruit);        // mango
+
+
+
+
+function testScope(){
+    let bike = 'BMW';
+    console.log(bike);      // BMW  
+    
+}
+
+testScope()
+console.log(bike);         // ❌ Error: bike is not defined
+
+
+
+{
+    let car = 'BMW';
+    console.log(car);       // BMW
+    
+}
+
+console.log(car);           // ❌ Error: car is not defined 
+
+
+
+
+
+
+
+
+
+// Closure: The child function has acess to parent scope variable even after outer function finished
 
 function counter(){
     let count = 0;
@@ -52,6 +91,8 @@ const counterfn = counter()
 counterfn()
 counterfn()
 counterfn()
+
+
 
 
 

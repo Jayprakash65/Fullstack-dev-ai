@@ -74,9 +74,10 @@ in the variable greet.
 /*
 Pure and Impure function
 
-Pure: if your output isa same the ouput will be same.
+Pure: if your input is same the ouput will be same. Hamesha same input pe same output deta hai
 
-Impure: for same iput their might be differen output. This is dppndent on the funvvtion . side effect is observed.
+
+Impure: for same input their might be differen output. This is dppndent on the funvvtion . side effect is observed.
 */
 
 

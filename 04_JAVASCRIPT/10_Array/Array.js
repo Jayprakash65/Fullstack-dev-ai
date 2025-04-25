@@ -1,20 +1,20 @@
-const person = ['jay', 20, 'howrah']
+const person = ['jay', 20, 'howrah'];
 
 // console.log(person[1]);
 
-// for(let i = 0; i< person.length; i++){
+// for(let i = 0; i < person.length; i++){
 // console.log(person[i]);
     
 // }
 
 
 for(let item of person){        
-    // console.log(item);             // give value 
+     console.log(item);             // give value 
     
 }
 
 for(let item in person){
-    // console.log(item);              // give indexs
+     console.log(item);              // give indexs
     
 }
 
@@ -51,4 +51,16 @@ console.log(nums.includes(5));  // true
 console.log(nums.indexof(5));  // -1 for false
 
 
+// 🧠 Real-Life Use:
 
+let cart = [];
+
+function addToCart(item){
+    cart.push(item);
+    console.log(`${item} added to cart.`);
+}
+
+addToCart('Shoes');
+addToCart('Watch')
+
+console.log(cart);  // ['Shoes', 'Watch']
