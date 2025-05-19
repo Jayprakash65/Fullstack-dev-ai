@@ -11,7 +11,7 @@ const CountryList = ({query}) => {
     useEffect(() =>{
         const fetchData = async () => {
             const response  = await axios.get('https://restcountries.com/v3.1/all')
-            setCountriesData(response.data)
+            setCountriesData(response.data);
             
         }
 
