@@ -1,22 +1,20 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import '../components/CountryDetail.css'
+import { Link, useParams } from "react-router-dom";
+import "../components/CountryDetail.css";
 
 const CountryDetail = () => {
-  const [countryData, setCountryData] = useState({});
+  const [countryData, setCountryData] = useState();
+  const [loading, setLoading] = useState(true)
 
   const params = useParams();
-
   const countryName = params.country;
 
-  console.log(params);
-  
-
   useEffect(() => {
+    setLoading(true)
+
     fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       .then((res) => res.json())
       .then(([data]) => {
-        
         setCountryData({
           name: data.name.common,
           nativeName: Object.values(data.name.nativeName)[0].common,
@@ -26,18 +24,35 @@ const CountryDetail = () => {
           capital: data.capital,
           flag: data.flags.svg,
           tld: data.tld,
-          languages: Object.values(data.languages).join(', '),
+          languages: Object.values(data.languages).join(", "),
           currencies: Object.values(data.currencies)
             .map((currency) => currency.name)
-            .join(', '),
-          
-        })
-        
-      });
-  }, []);
+            .join(", "),
 
-  return countryData === null ? (
-    "Loading"
+          borders: [],
+          
+        });
+
+        if(!data.borders){
+          data.borders = []
+        }
+
+
+        Promise.all(data.borders.map((border) => {
+         return  fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+          .then((res) => res.json())
+          .then(([borderCountry]) => borderCountry.name.common)
+        })).then((borders) => {
+          setCountryData((prevState) => ({...prevState, borders}))
+        })
+
+        setLoading(false)
+
+      });
+  }, [countryName]);
+
+  return loading ? (
+    <h1>Loading...</h1>
   ) : (
     <main>
       <div className="country-details-container">
@@ -82,9 +97,14 @@ const CountryDetail = () => {
                 <span className="languages"></span>
               </p>
             </div>
-            <div className="border-countries">
-              <b>Border Countries: </b>&nbsp;
-            </div>
+            {
+              countryData.borders?.length !== 0 ? <div className="border-countries">
+                <b>Border Countries: </b>&nbsp;
+                {countryData.borders?.map((border) => {
+                  return <Link to={`/${border}`}>{border}</Link>;
+                })}
+              </div> : null
+            }
           </div>
         </div>
       </div>
