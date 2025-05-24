@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import "../components/CountryDetail.css";
+import CountryDetailShimmer from "./CountryDetailShimmer";
 
 const CountryDetail = () => {
   const [countryData, setCountryData] = useState();
   const [loading, setLoading] = useState(true)
 
   const params = useParams();
+  const {state} = useLocation()
+
+  
   const countryName = params.country;
 
-  useEffect(() => {
-    setLoading(true)
 
-    fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
-      .then((res) => res.json())
-      .then(([data]) => {
-        setCountryData({
+  function updateCountryData(data){
+    setCountryData({
           name: data.name.common,
           nativeName: Object.values(data.name.nativeName)[0].common,
           population: data.population,
@@ -37,7 +37,6 @@ const CountryDetail = () => {
           data.borders = []
         }
 
-
         Promise.all(data.borders.map((border) => {
          return  fetch(`https://restcountries.com/v3.1/alpha/${border}`)
           .then((res) => res.json())
@@ -47,18 +46,40 @@ const CountryDetail = () => {
         })
 
         setLoading(false)
+  }
 
-      });
+
+  useEffect(() => {
+  
+    if(state){
+      updateCountryData(state);
+      return
+    }
+
+    setLoading(true)
+
+    fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
+      .then((res) => res.json())
+      .then(([data]) => {
+        updateCountryData(data)
+
+      }).catch((err) => {
+        console.log(err);
+        setLoading(true)
+      })
   }, [countryName]);
 
   return loading ? (
-    <h1>Loading...</h1>
+    
+    <CountryDetailShimmer/>
   ) : (
+    <>
     <main>
-      <div className="country-details-container">
+      {countryData.length === 0 ? <CountryDetailShimmer/> : <div className="country-details-container">
         <span onClick={() => history.back()} className="back-button">
           <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
         </span>
+
         <div className="country-details">
           <img src={countryData.flag} alt="" />
           <div className="details-text-container">
@@ -100,16 +121,18 @@ const CountryDetail = () => {
             {
               countryData.borders?.length !== 0 ? <div className="border-countries">
                 <b>Border Countries: </b>&nbsp;
-                {countryData.borders?.map((border) => {
-                  return <Link to={`/${border}`}>{border}</Link>;
+                {countryData.borders?.map((border, i) => {
+                  return <Link key={i} to={`/${border}`}>{border}</Link>;
                 })}
               </div> : null
             }
           </div>
         </div>
-      </div>
+      </div>}
     </main>
-  );
+    </>
+  )
+;
 };
 
 export default CountryDetail;

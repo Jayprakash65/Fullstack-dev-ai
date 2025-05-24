@@ -2,11 +2,13 @@ import {useState, useEffect } from "react";
 import CountryCard from "./CountryCard.jsx";
 // import countriesData from "../countriesData.js";
 import axios from 'axios';
+import CountriesListShimmer from "./CountriesListShimmer.jsx";
 
 
-const CountryList = ({query}) => {
+const CountryList = ({region, query}) => {
 
     const [countriesData, setCountriesData] = useState([])
+
 
     useEffect(() =>{
         const fetchData = async () => {
@@ -16,13 +18,24 @@ const CountryList = ({query}) => {
         }
 
         fetchData()
+        
     },[])
+
+    
 
   return (
     <>
-      <div className="countries-container">
+      {!countriesData.length ? <CountriesListShimmer/> : <div className="countries-container">
 
-        {countriesData.filter((country) => country.name.common.toLowerCase().includes(query)).map((country) => {
+        {countriesData.filter((country) => {
+          
+          const matchesQuery = country.name.common.toLowerCase().includes(query.toLowerCase())
+          const matchesRegion = region === '' || country.region === region;
+
+          return matchesQuery && matchesRegion
+
+
+        }).map((country) => {
           return (
             <CountryCard
               key={country.name.common}
@@ -31,10 +44,11 @@ const CountryList = ({query}) => {
               population={country.population}
               region={country.region}
               capital={country.capital?.[0]}
+              data={country}
             />
           );
         })}
-      </div>
+      </div>}
     </>
   );
 };
